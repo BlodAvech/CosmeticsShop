@@ -70,22 +70,18 @@ body {
 
 .main{
     color: #7A3049;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+
 }
 
 .featured
 {
-    background-color: #000000;
-    max-width: 100%;
-    flex: 1;
-
 }
 
 .featured_title 
 {
-
+    text-align: center;
+    font-size: 24px;
+    padding: 30px 0px;
 }
 
 .featured_panel
@@ -97,3 +93,26 @@ body {
 {
 
 }
+
+.featured_panel_item_img
+{
+    width: 200px;
+    height: 200px;
+}
+
+.subscribe
+{
+}
+.subscribe_title
+{
+
+}
+.subscribe_inputfield
+{
+
+}
+.subscribe_button
+{
+
+}
+
