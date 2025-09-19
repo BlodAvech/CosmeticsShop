@@ -31,7 +31,7 @@
 .header_title
 {
     font-size: 50px;
-    padding: 50px 0px 10px 0px;
+    padding: 40px 0px 10px 0px;
     
 }
 
@@ -103,17 +103,39 @@ body {
 
 .subscribe
 {
+    text-align: center;
 }
+
 .subscribe_title
 {
-
+    font-size: 32px;
+    padding: 20px 0px;
 }
-.subscribe_inputfield
-{
 
+.subscribe_form
+{
+    padding: 20px 0px;
 }
-.subscribe_button
-{
 
+.subscribe_form_input
+{
+    width: 500px;
+    height: 50px;
+    font-size: 20px;
+    padding: 0px 30px;
+    border:none;
+    border-radius: 5px;
+}
+
+.subscribe_form_button
+{
+    width: 150px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    background-color: #C55583;
+    color: #F7E6F6;
+    font-size: 20px;
+    margin-left: 20px;
 }
 
