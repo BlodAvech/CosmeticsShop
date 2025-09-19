@@ -98,7 +98,7 @@ body {
 .featured_panel_item_img
 {
     width: 20%;
-    border-radius: 5%;
+    border-radius: 20px;
 }
 
 .subscribe
@@ -139,3 +139,33 @@ body {
     margin-left: 20px;
 }
 
+
+.profile {
+    padding: 50px;
+}
+
+.profile_icon {
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin-right: 15px;
+}
+
+.profile_image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.profile_name {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 6px;
+}
+
+.profile_email {
+    font-size: 28px;
+    color: #666;
+    margin-top: 10px;
+}
