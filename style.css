@@ -1,0 +1,148 @@
+/* ===== Общие стили ===== */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff0f6;
+  color: #333;
+}
+
+h1, h2, h3 {
+  font-family: "Playfair Display", serif;
+  color: #a02060;
+  margin: 0;
+}
+
+/* ===== Навигация ===== */
+.navbar {
+  background-color: #d63384;
+  padding: 15px;
+  text-align: center;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  text-decoration: underline;
+  color: #ffe6f2;
+}
+
+/* ===== Заголовок ===== */
+.page-header {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.page-title {
+  font-size: 2rem;
+}
+.page-title::before {
+  content: "✨ ";
+}
+.page-title::after {
+  content: " ✨";
+}
+
+
+.page-subtitle {
+  font-size: 1.2rem;
+  color: #555;
+}
+#main-section {
+  padding: 20px;
+  background-color: #644956;
+}
+
+/* ===== Список продуктов ===== */
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 20px;
+}
+
+/* ===== Карточка продукта ===== */
+.product-card {
+  background-color: #fff;
+  border: 1px solid #f1a7c5;
+  border-radius: 10px;
+  width: 220px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+  transition: scale (1,3s);
+}
+
+.product-name {
+  font-size: 1.2rem;
+  margin: 10px 0 5px;
+}
+
+.product-price {
+  color: #a02060;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* ===== Кнопки ===== */
+.btn-cart,
+.btn-like {
+  background-color: #d63384;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+  margin: 5px 3px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cart:hover,
+.btn-like:hover {
+  background-color: #a02060;
+}
+.blog-post {
+  justify-content: center;
+  border: 2px solid #f8c8dc; 
+  border-radius: 10px;      
+  padding: 15px;            
+  margin: 20px auto;        
+  background-color: #fff;  
+  max-width: 700px;         
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1); 
+}
+.blog-img {
+  width: 30%;
+  height: auto;         
+  border-radius: 50%; 
+}
+
+/* ===== Футер ===== */
+.site-footer {
+  background-color: #d63384;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
