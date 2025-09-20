@@ -201,7 +201,7 @@ nav a:hover {
     height: 150px;
     border-radius: 10px;
     margin-right: 30px;
-     transition: transform 0.3s;
+    transition: transform 0.3s;
 }
 
 .item img:hover {
