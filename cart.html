@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="nav">
+        <a class="nav_buttons" href="index.html">Home</a>
+        <a class="nav_buttons" href="products.html">Products</a>
+        <a class="nav_buttons" href="blog.html">Blog</a>
+        <a class="nav_buttons" href="cart.html">Cart</a>
+        <a class="nav_buttons" href="favorites.html">Favorites</a>
+        <a class="nav_buttons" href="contact.html">Contact</a>
+        <a class="nav_buttons" href="setting.html">Settings</a>
+        <a class="nav_buttons" href="profile.html">Profile</a>
+    </nav>
+
+    <main class="main">
+        <section class="cart-items">
+            <h2>Your Items</h2>
+
+            <div class="item">
+                <img src="https://m.media-amazon.com/images/I/31POGD-KlsL._AC_.jpg" alt="Lipstick">
+                <div class="details">
+                    <p><strong>Amuse lipstick</strong></p>
+                    <p>Price: 5000 kzt</p>
+                    <input type="number" value="1" readonly>
+                    <button class="remove">Remove</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="https://img.joomcdn.net/88764d3ddc98d8c2fb00b6d9ab99ea2360163d1f_original.jpeg" alt="eyeshadow">
+                <div class="details">
+                    <p><strong>Romand eyeshadow palette</strong></p>
+                    <p>Price: 15000 kzt</p>
+                    <input typr="number" value="1" readonly>
+                    <button class="remove">Remove</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="https://toshkent-parfum.uz/media/cache/6a/2f/6a2f325fb5a8a9807d1a1570ebc2e888.webp" alt="Cushion">
+                <div class="details">
+                    <p><strong>Clio kushon</strong></p>
+                    <p>Price: 14000 kzt</p>
+                    <input type="number" value="1" readonly>
+                    <button class="remove">Remove</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="https://img.joomcdn.net/5d318e600242dcd413986705a50d0b00e7fca557_original.jpeg" alt="Pencil for brow">
+                <div class="details">
+                    <p><strong>Pencil for eyebrow</strong></p>
+                    <p>Price: 3000 kzt</p>
+                    <input type="number" value="1" readonly>
+                    <button class="remove">Remove</button>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="cart-summary">
+            <h2>Order Summary</h2>
+            <p>Total: <strong>37000 kzt</strong></p>
+
+            <form>
+        <label for="email">Enter your email:</label><br>
+        <input type="email" id="email" name="email" placeholder="example@mail.com" required><br><br>
+        <button type="submit" class="checkout">Go to payment</button>
+    </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="team_info">
+            Team: AmandaLindaRose | Members: Shahnaz.K | Kyrmyzy.Z | Saltanat.B | Erkhan.P
+        </div>
+    </footer>
+</body>
+</html>
