@@ -1,175 +1,135 @@
-/* ===== Общие стили ===== */
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
 body {
-  font-family: "Poppins", sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #fff0f6;
-  color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+
+    background-color: #F7E6F6;
+
+    font-family: 'Verdana' , sans-serif;
 }
+
 
 h1, h2, h3 {
-  font-family: "Playfair Display", serif;
-  color: #a02060;
-  margin: 0;
+    font-family: "Playfair Display", serif;
+    margin: 0;
 }
 
-/* ===== Навигация ===== */
-.navbar {
-  background-color: #d63384;
-  padding: 15px;
-  text-align: center;
+button {
+    background: #fc3d9d;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
-.navbar a {
-  color: white;
-  text-decoration: none;
-  margin: 0 15px;
-  font-weight: bold;
+button:hover {
+    background: #a61e65;
 }
 
-.navbar a:hover,
-.navbar a.active {
-  text-decoration: underline;
-  color: #ffe6f2;
+.main{
+    color: #7A3049;
+
 }
 
-/* ===== Заголовок ===== */
 .page-header {
-  text-align: center;
-  padding: 30px 20px;
+    text-align: center;
+    padding: 30px 20px;
 }
 
 .page-title {
-  font-size: 2rem;
+    font-size: 2rem;
 }
 .page-title::before {
-  content: "✨ ";
+    content: "✨ ";
 }
 .page-title::after {
-  content: " ✨";
+    content: " ✨";
 }
-
 
 .page-subtitle {
-  font-size: 1.2rem;
-  color: #555;
+    font-size: 1.2rem;
+    color: #555;
 }
+
 #main-section {
-  padding: 20px;
-  background-color: #644956;
+    padding: 20px;
+    background-color: #644956;
 }
 
-/* ===== Список продуктов ===== */
 .product-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 25px;
-  padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 20px;
 }
 
-/* ===== Карточка продукта ===== */
 .product-card {
-  background-color: #fff;
-  border: 1px solid #f1a7c5;
-  border-radius: 10px;
-  width: 220px;
-  padding: 15px;
-  text-align: center;
-  box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
+    background-color: #fff;
+    border: 1px solid #f1a7c5;
+    border-radius: 10px;
+    width: 220px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
 }
 
 .product-card:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 .product-img {
-  width: 100%;
-  height: 200px;
-  object-fit: contain;
-  border-radius: 8px;
-  margin-bottom: 10px;
-  transition: transform 0.3s ease;
-  transition: scale (1,3s);
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+    transition: scale (1,3s);
 }
 
 .product-name {
-  font-size: 1.2rem;
-  margin: 10px 0 5px;
+    font-size: 1.2rem;
+    margin: 10px 0 5px;
 }
 
 .product-price {
-  color: #a02060;
-  font-weight: bold;
-  margin-bottom: 10px;
+    color: #a02060;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
-/* ===== Кнопки ===== */
-.btn-cart,
-.btn-like {
-  background-color: #d63384;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  padding: 8px 12px;
-  cursor: pointer;
-  margin: 5px 3px;
-  transition: background-color 0.3s ease;
-}
-
-.btn-cart:hover,
-.btn-like:hover {
-  background-color: #a02060;
-}
 .blog-post {
-  justify-content: center;
-  border: 2px solid #f8c8dc; 
-  border-radius: 10px;      
-  padding: 15px;            
-  margin: 20px auto;        
-  background-color: #fff;  
-  max-width: 700px;         
-  box-shadow: 2px 2px 8px rgba(0,0,0,0.1); 
+    justify-content: center;
+    border: 2px solid #f8c8dc; 
+    border-radius: 10px;      
+    padding: 15px;            
+    margin: 20px auto;        
+    background-color: #fff;  
+    max-width: 700px;         
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1); 
 }
+
 .blog-img {
-  width: 30%;
-  height: auto;         
-  border-radius: 50%; 
+    width: 30%;
+    height: auto;         
+    border-radius: 50%; 
 }
 
-/* ===== Футер ===== */
 .site-footer {
-  background-color: #d63384;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  margin-top: 30px;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #fad9ed; 
-}
-
-header {
-    background: #fc3d9d;
+    background-color: #d63384;
     color: white;
-    padding: 10px;
     text-align: center;
-    font-size: 20px;
-}
-
-nav a {
-    color: white;
-    margin: 0 20px;
-    text-decoration: none;
-}
-
-nav a:hover {
-    text-decoration: underline;
+    padding: 15px;
+    margin-top: 30px;
 }
 
 .cart-items, .cart-summary {
@@ -208,60 +168,15 @@ nav a:hover {
     transform: scale(1.1); 
 }
 
-button {
-    background: #fc3d9d;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #a61e65;
-}
-
-footer {
-    background: #fc3d9d;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    margin-top: 20px;
-}
-
-form {
-    margin-top: 15px;
-}
-
-input[type="email"] {
-    padding: 8px;
-    width: 50%;
-    border: 1px solid #fc3d9d;
-    border-radius: 5px;
-    margin-top: 5px;
-}
-
-input[type="email"]:focus {
-    outline: none;
-    border-color: #a61e65;
-    box-shadow: 0 0 5px rgba(166, 30, 101, 0.5);
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
-
 
 .nav_buttons
 {
-    background: none;
-    border: none;
     font-size: 20px;
     color: #F7E6F6;
-}
-
-.nav_buttons:hover
-{
-    opacity: 0.9;
-    text-shadow: 5px 5px 5px #000000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    margin: 0px 15px;
 }
 
 .nav
@@ -269,6 +184,14 @@ input[type="email"]:focus {
     background-color: #C55583;
     padding: 30px 0px;
     text-align: center;
+}
+
+
+
+.nav_buttons:hover {
+    color: white; 
+    text-shadow: 0 0 10px #fff, 0 0 20px #ff80c0, 0 0 30px #ff4da6; 
+    text-decoration: underline;
 }
 
 .header
@@ -298,28 +221,13 @@ input[type="email"]:focus {
 
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
 
-    background-color: #F7E6F6;
-
-    font-family: 'Verdana' , sans-serif;
-
-}
 
 .team_info
 {
     font-size: 20px;
     color: #F7E6F6;
     word-spacing: 10px;
-}
-
-.main{
-    color: #7A3049;
-
 }
 
 .featured
@@ -331,7 +239,6 @@ body {
 .featured_title 
 {
     font-size: 32px;
-    padding: 30px 0px;
 }
 
 .featured_panel
@@ -388,12 +295,6 @@ body {
     margin-left: 20px;
 }
 
-
-.main {
-    color: #7A3049;
-
-}
-
 #main_profile {
     margin: 0 auto;
     padding: 40px 0px;
@@ -412,7 +313,7 @@ body {
     border-bottom: 2px solid #F7E6F6;
     padding-bottom: 15px;
     margin-bottom: 20px;
-        font-size: 24px;
+    font-size: 24px;
 }
 
 .profile_content {
@@ -490,7 +391,6 @@ body {
 .register_btn {
     width: 100%;
     padding: 15px;
-    background-color: #C55583;
     color: #F7E6F6;
     border: none;
     border-radius: 5px;
@@ -498,34 +398,6 @@ body {
     cursor: pointer;
 }
 
-.register_btn:hover {
-    background-color: #A93D6D;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #fad9ed; 
-}
-
-header {
-    background: #fc3d9d;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    font-size: 20px;
-}
-
-nav a {
-    color: white;
-    margin: 0 20px;
-    text-decoration: none;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
 
 .cart-items, .cart-summary {
     background: #fff0f5; 
@@ -556,76 +428,17 @@ nav a:hover {
     height: 150px;
     border-radius: 10px;
     margin-right: 30px;
-     transition: transform 0.3s;
+    transition: transform 0.3s;
 }
 
 .item img:hover {
-  transform: scale(1.1); 
-}
-
-button {
-    background: #fc3d9d;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #a61e65;
-}
-
-footer {
-    background: #fc3d9d;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    margin-top: 20px;
+    transform: scale(1.1); 
 }
 
 form {
     margin-top: 15px;
 }
 
-input[type="email"] {
-    padding: 8px;
-    width: 50%;
-    border: 1px solid #fc3d9d;
-    border-radius: 5px;
-    margin-top: 5px;
-}
-
-input[type="email"]:focus {
-    outline: none;
-    border-color: #a61e65;
-    box-shadow: 0 0 5px rgba(166, 30, 101, 0.5);
-}
-
-
-.nav-buttons
-{
-    background: none;
-    border: none;
-    font-size: 20px;
-    color: #fad9ed;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    
-}
-
-.nav
-{
-    background-color: #cf95b8;
-    padding: 20px;
-    text-align: center;
-}
-
-.nav-buttons:hover {
-    transform: translateY(-5px) scale(1.1);
-    color: white; 
-    text-shadow: 0 0 10px #fff, 0 0 20px #ff80c0, 0 0 30px #ff4da6; 
-}
 .sale-section {
     display: flex;
     justify-content: center;
@@ -669,18 +482,6 @@ input[type="email"]:focus {
     margin: 5px 0;
     font-size: 16px;
     color: #666;
-}
-
-.sale-product-info button {
-    margin: 5px 0;
-    padding: 8px 12px;
-    font-size: 14px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #cf95b8;
-    color: white;
-    transition: background 0.3s;
 }
 
 .sale-product-info button:hover {
@@ -729,154 +530,9 @@ input[type="email"]:focus {
 .contact-form button {
     margin-top: 15px;
     padding: 10px;
-    background: #cf95b8;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s;
+
 }
 
 .contact-form button:hover {
     background: #a02060;
-}
- 
-.nav-buttons
-{
-    background: none;
-    border: none;
-    font-size: 20px;
-    color: #fad9ed;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    
-}
-
-.nav
-{
-    background-color: #cf95b8;
-    padding: 20px;
-    text-align: center;
-}
-
-.nav-buttons:hover {
-    transform: translateY(-5px) scale(1.1);
-    color: white; 
-    text-shadow: 0 0 10px #fff, 0 0 20px #ff80c0, 0 0 30px #ff4da6; 
-}
-.sale-section {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;   
-    gap: 20px;
-}
-
-.sale-card {
-    display: flex;
-    flex-direction: column;  
-    align-items: center;
-    width: 220px;
-    padding: 15px;
-    margin: 20px;
-    border: 2px outset #dec3d1;
-    border-radius: 10px;
-    box-shadow: 5px 5px 5px #a2a0a0;
-    background: white;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
-}
-
-.sale-card img {
-    width: 200px;
-    height: 200px;
-    object-fit: contain;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-
-.sale-product-info {
-    text-align: center;
-}
-
-.sale-product-info h3 {
-    margin: 5px 0;
-    font-size: 18px;
-    color: #333;
-}
-
-.sale-product-info p {
-    margin: 5px 0;
-    font-size: 16px;
-    color: #666;
-}
-
-.sale-product-info button {
-    margin: 5px 0;
-    padding: 8px 12px;
-    font-size: 14px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #cf95b8;
-    color: white;
-    transition: background 0.3s;
-}
-
-.sale-product-info button:hover {
-    background-color: #a02060; 
-}
-
-.sale-card:hover {
-    transform: translateY(-10px) scale(1.05); 
-    box-shadow: 10px 10px 15px #888; 
-}
-
-.contact-section {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px #aaa;
-    background: white;
-}
-
-.contact-section h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-}
-
-.contact-form label {
-    margin: 10px 0 5px;
-    font-weight: bold;
-    color: #444;
-}
-
-.contact-form input,
-.contact-form textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
-}
-
-.contact-form button {
-    margin-top: 15px;
-    padding: 10px;
-    background: #cf95b8;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.contact-form button:hover {
-    background: #a02060;
-}
+} 
