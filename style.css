@@ -176,7 +176,6 @@ button:hover {
     cursor: pointer;
     transition: all 0.3s ease;
     text-decoration: none;
-    margin: 0px 15px;
 }
 
 .nav
@@ -184,6 +183,7 @@ button:hover {
     background-color: #C55583;
     padding: 30px 0px;
     text-align: center;
+    word-spacing: 50px;
 }
 
 
@@ -229,6 +229,7 @@ button:hover {
     color: #F7E6F6;
     word-spacing: 10px;
 }
+
 
 .featured
 {
@@ -288,6 +289,11 @@ button:hover {
 .subscribe_form
 {
     padding: 20px 0px;
+}
+
+.subscribe_form button,input
+{
+    box-shadow: #333 0px 4px 6px;
 }
 
 .subscribe_form_input
