@@ -107,7 +107,7 @@ button:hover {
     margin-bottom: 10px;
 }
 
-.blog-post {
+.blog-content {  
     justify-content: center;
     border: 2px solid #f8c8dc; 
     border-radius: 10px;      
@@ -116,12 +116,27 @@ button:hover {
     background-color: #fff;  
     max-width: 700px;         
     box-shadow: 2px 2px 8px rgba(0,0,0,0.1); 
+     transition: transform 0.3s ease;
+}
+.blog-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.blog-content:hover{
+    transform: scale(1.05);
 }
 
+
 .blog-img {
-    width: 30%;
-    height: auto;         
-    border-radius: 50%; 
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    transform: scale(1.05);
+}
+.blog-text {
+    flex: 1; 
 }
 
 .site-footer {
