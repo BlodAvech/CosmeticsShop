@@ -38,6 +38,26 @@ button:hover {
     background: #a61e65;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between; /* logo слева, ссылки справа */
+  align-items: center;            /* вертикальное выравнивание */
+  padding: 10px 20px;
+  background-color: #f8f8f8;
+}
+
+.nav ul {
+  display: flex;
+  gap: 20px; /* расстояние между ссылками */
+  list-style: none;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
 
 .header { grid-area: 1 / 1 / 2 / 10; }
 .nav { grid-area: 1 / 10 / 3 / 11; }
