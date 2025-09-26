@@ -3,15 +3,20 @@
 
 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
     margin: 0;
     padding: 0;
+    min-height: 100vh;
 
     background-color: #F7E6F6;
-
     font-family: 'Verdana' , sans-serif;
+
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: auto 1fr auto; /* auto подстраивается под контент */
+    min-height: 100vh;
+    margin: 0;
+
+    color: #7A3049;
 }
 
 
@@ -33,9 +38,36 @@ button:hover {
     background: #a61e65;
 }
 
-.main{
-    color: #7A3049;
 
+.footer { grid-area: 5 / 1 / 6 / 11; }
+.nav { grid-area: 1 / 10 / 5 / 11; }
+.header { grid-area: 1 / 1 / 2 / 10; }
+.main { grid-area: 2 / 1 / 5 / 10; }
+
+.nav_buttons
+{
+    font-size: 20px;
+    color: #F7E6F6;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    padding: 20px;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #C55583;
+}
+
+
+
+.nav_buttons:hover {
+    color: white; 
+    text-shadow: 0 0 10px #fff, 0 0 20px #ff80c0, 0 0 30px #ff4da6; 
+    text-decoration: underline;
 }
 
 .page-header {
@@ -116,7 +148,7 @@ button:hover {
     background-color: #fff;  
     max-width: 700px;         
     box-shadow: 2px 2px 8px rgba(0,0,0,0.1); 
-     transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
 }
 .blog-content {
     display: flex;
@@ -183,31 +215,6 @@ button:hover {
     transform: scale(1.1); 
 }
 
-
-.nav_buttons
-{
-    font-size: 20px;
-    color: #F7E6F6;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-decoration: none;
-}
-
-.nav
-{
-    background-color: #C55583;
-    padding: 30px 0px;
-    text-align: center;
-    word-spacing: 50px;
-}
-
-
-
-.nav_buttons:hover {
-    color: white; 
-    text-shadow: 0 0 10px #fff, 0 0 20px #ff80c0, 0 0 30px #ff4da6; 
-    text-decoration: underline;
-}
 
 .header
 {
@@ -532,7 +539,7 @@ form {
 }
 
 .contact-section {
-    max-width: 600px;
+    max-width: 60%;
     margin: 40px auto;
     padding: 20px;
     border-radius: 10px;
@@ -549,6 +556,7 @@ form {
 .contact-form {
     display: flex;
     flex-direction: column;
+    gap: 20px;
 }
 
 .contact-form label {
