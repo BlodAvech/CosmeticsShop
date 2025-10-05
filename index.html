@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cosmetics Shop</title>
-    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="p-3">
@@ -59,47 +58,78 @@
         <h3><a href="blog.html">Blog</a></h3>
     </div>
 
-    <div class="header text-center my-4">
-            <h1 class="header_title mb-4">Welcome To Cosmetics Shop</h1>
+
+ <nav class="nav mb-8">
+        <div id="logo" class="me-6">
+            <img src="img/logo.png" alt="Logo">
+        </div>
+        <a class="nav_buttons me-3" href="index.html">Home</a>
+        <a class="nav_buttons me-3" href="products.html">Products</a>
+        <a class="nav_buttons me-3" href="blog.html">Blog</a>
+        <a class="nav_buttons me-3" href="cart.html">Cart</a>
+        <a class="nav_buttons me-3" href="favorites.html">Favorites</a>
+        <a class="nav_buttons me-3" href="contact.html">Contact</a>
+        <a class="nav_buttons me-3" href="sale.html">Sale</a>
+        <a class="nav_buttons" href="profile.html">Profile</a>
+    </nav>
+
+    <div class="header">
+            <h1 class="header_title">Welcome To Cosmetics Shop</h1>
             <p class="header_subtitle">Best beauty products for your style &#127800</p>
         </div>
 
-        <div class="main">
-        <div class="featured">
-            <div class="featured_title">Featured Products</div>
-            <div class="featured_panel">
-                <div class="featured_panel_item">
-                    <img class="featured_panel_item_img" src="img/696d674d61696e5064708ddc3c1b408c633fullhd.png" alt="">
-                </div>
-                <div class="featured_panel_item">
-                    <img class="featured_panel_item_img" src="img/696d674d61696e5064708ddc43b59205812fullhd.png" alt="">
-                </div>
-                <div class="featured_panel_item">
-                    <img class="featured_panel_item_img" src="img/696d674d61696e5064708ddc45df1f62313fullhd.png" alt="">
-                </div>
-                
-                <div class="featured_panel_item">
-                    <img class="featured_panel_item_img" src="img/696d674d61696e5064708ddc45df1f62313fullhd.png" alt="">
-                </div>
-                <div class="featured_panel_item">
-                    <img class="featured_panel_item_img" src="img/696d674d61696e5064708ddc3c1b408c633fullhd.png" alt="">
-                </div>
-                <div class="featured_panel_item">
-                    <img class="featured_panel_item_img" src="img/696d674d61696e5064708ddc43b59205812fullhd.png" alt="">
-                </div>
-                
-                <div class="featured_panel_item">
-                    <img class="featured_panel_item_img" src="img/696d674d61696e5064708ddc43b59205812fullhd.png" alt="">
-                </div>
-                <div class="featured_panel_item">
-                    <img class="featured_panel_item_img" src="img/696d674d61696e5064708ddc45df1f62313fullhd.png" alt="">
-                </div>
-                <div class="featured_panel_item">
-                    <img class="featured_panel_item_img" src="img/696d674d61696e5064708ddc3c1b408c633fullhd.png" alt="">
-                </div>
-
+        <div id="profileCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#profileCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#profileCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#profileCarousel" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#profileCarousel" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#profileCarousel" data-bs-slide-to="4"></button>
+            <button type="button" data-bs-target="#profileCarousel" data-bs-slide-to="5"></button>
+            <button type="button" data-bs-target="#profileCarousel" data-bs-slide-to="6"></button>
+            <button type="button" data-bs-target="#profileCarousel" data-bs-slide-to="7"></button>
+            <button type="button" data-bs-target="#profileCarousel" data-bs-slide-to="8"></button>
+        </div>
+        
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="img/696d674d61696e5064708ddc43b59205812fullhd.png" alt="Slide 1">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="img/kushon.png" alt="Slide 2">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="img/lipstic.png" alt="Slide 3">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="img/makeup.png" alt="Slide 4">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="img/palitr.png" alt="Slide 5">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="img/scinCare.png" alt="Slide 6">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="img/lash.png" alt="Slide 7">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="img/696d674d61696e5064708ddc3c1b408c633fullhd.png" alt="Slide 8">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="img/696d674d61696e5064708ddc45df1f62313fullhd.png" alt="Slide 9">
             </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#profileCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#profileCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
 
         <div class="subscribe">
             <div class="subscribe_title">Subscribe to our newsletter</div>
@@ -109,7 +139,7 @@
             </div>
         </div>
     </div>
-    </div>
+    
     
     <footer class="footer text-center py-3 mt-5" style="background-color: #C55583;">
         <div class="team_info">
@@ -119,4 +149,3 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
