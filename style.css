@@ -34,6 +34,27 @@
     transform: scale(1.05);
 }
 
+.navbar-nav .nav-link {
+    color: #d4c435;
+    font-weight: 500;
+    margin-right: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.navbar-nav .nav-link:hover {
+    color: #ead351;
+}
+.navbar-brand img {
+    height: 40px;
+}
+.navbar-nav {
+    flex-wrap: nowrap; 
+}
+
+.navbar-nav {
+    gap: 10px;
+}
+
 .nav img{
     height: 100%;
     border-radius: 50%;
