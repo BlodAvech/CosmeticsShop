@@ -15,7 +15,7 @@
 }
 
 #profileCarousel .carousel-item img, .carousel-item.active img {
-    max-weight: 650px;
+    max-width: 650px;
     height: 600px;
     object-fit:сontain;
     object-position: center;
