@@ -177,11 +177,11 @@ h1, h2, h3 {
     h1 { font-size: 32px; }
     h2 { font-size: 24px; }
     p  { font-size: 16px; margin-top: auto; display: flex; align-items: center;}
-    featured_panel {
+    .featured_panel {
     grid-template-columns: 1fr; }
 }
 
-@media (min-width: 1024px) { 
+@media (min-width: 1024px ) { 
     .btn-outline.btn-sm {
         padding: 5px 10px !important;
         font-size: 0.8rem !important;
