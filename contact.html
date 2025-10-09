@@ -3,120 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Cosmetics Shop</title>
+    <title>Contact</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body class="p-3">
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="img/logo.png" alt="Cosmetics Shop Logo" style="height:40px;">
-            </a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
-                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
-                    <li class="nav-item"><a class="nav-link" href="favorites.html">Favorites</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="sale.html">Sale</a></li>
-                    <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <div class="sidebar p-3 mb-4">
-        <h3 class="mb-4">Categories</h3>
-        <ul class="mb-4">
+<body>
+    <div class="sidebar">
+        <h3>Categories</h3>
+        <ul>
             <li><a href="#">Makeup</a></li>
             <li><a href="#">Skincare</a></li>
             <li><a href="#">Haircare</a></li>
             <li><a href="#">Fragrance</a></li>
             <li><a href="#">Tools & Brushes</a></li>
         </ul>
-
-        <h3 class="mb-4">Filters</h3>
-        <ul class="mb-4">
+        <h3>Filters</h3>
+        <ul>
             <li><a href="#">Price: Low to High</a></li>
             <li><a href="#">Price: High to Low</a></li>
             <li><a href="#">Best Sellers</a></li>
             <li><a href="#">New Arrivals</a></li>
         </ul>
-
-        <h3 class="mt-4 mb-2"><a href="profile.html">My profile</a></h3>
-        <h3 class="mb-2"><a href="contact.html">Contact</a></h3>
-        <h3><a href="blog.html">Blog</a></h3>
+        <h3>  <a href="profile.html"> My profile </a> </h3>
+        <h3>  <a href= "contact.html"> Contact </a> </h3>
+        <h3>  <a href= "blog.html"> Blog </a> </h3>
     </div>
 
-    <div class="header text-center my-4">
-        <h1 class="header_title mb-4">Contact with us</h1>
-        <p class="header_subtitle">Do you have any questions?</p>
-    </div>
+    <nav class="nav">
+        <div id="logo"> <img src="img/logo.png"> </div>
+        <a class="nav_buttons" href="index.html">Home</a>
+        <a class="nav_buttons" href="products.html">Products</a>
+        <a class="nav_buttons" href="blog.html">Blog</a>
+        <a class="nav_buttons" href="cart.html">Cart</a>
+        <a class="nav_buttons" href="favorites.html">Favorites</a>
+        <a class="nav_buttons" href="contact.html">Contact</a>
+        <a class="nav_buttons" href="sale.html">Sale</a>
+        <a class="nav_buttons" href="profile.html">Profile</a>
+    </nav>
 
     <main class="main">
         <section class="contact-section">
-            <h2 class="text-center mb-4">Contact Us</h2>
-            
-            <form class="contact-form needs-validation" novalidate>
-                <div class="mb-3">
-                    <label for="name" class="form-label">Your Name</label>
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your full name" required>
-                    <div class="invalid-feedback">
-                        Please provide your name.
-                    </div>
-                </div>
-                
-                <div class="mb-3">
-                    <label for="email" class="form-label">Your Email</label>
-                    <div class="input-group">
-                        <span class="input-group-text">@</span>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
-                    </div>
-                    <div class="invalid-feedback">
-                        Please provide a valid email address.
-                    </div>
-                </div>
-            
-                
-                <div class="mb-3">
-                    <label for="message" class="form-label">Message</label>
-                    <textarea class="form-control" id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
-                    <div class="invalid-feedback">
-                        Please write your message.
-                    </div>
-                </div>
-                
-                <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="newsletter" name="newsletter">
-                    <label class="form-check-label" for="newsletter">
-                        Subscribe to our newsletter
-                    </label>
-                </div>
-                
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                    <button type="reset" class="btn btn-secondary me-md-2">Reset</button>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </div>
-            </form>
+        <h2>Contact Us</h2>
+        <form class="contact-form">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+    
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Write your message" required></textarea>
+    
+        <button type="submit">Send</button>
+        </form>
         </section>
     </main>
 
-    <footer class="footer text-center py-3 mt-5">
+        <footer class="footer">
         <div class="team_info">
             Team: AmandaLindaRose | Members: Shahnaz.K | Kyrmyzy.Z | Saltanat.B | Erkhan.P
         </div>
     </footer>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
