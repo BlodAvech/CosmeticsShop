@@ -4,103 +4,87 @@
     <meta charset="UTF-8">
     <title>Favorites</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body class="p-3">
 
-    <div class="sidebar p-3 mb-4">
-        <h3 class="mb-4">Categories</h3>
-        <ul class="mb-4">
+<body>
+  <div class="sidebar">
+        <h3>Categories</h3>
+        <ul>
             <li><a href="#">Makeup</a></li>
             <li><a href="#">Skincare</a></li>
             <li><a href="#">Haircare</a></li>
             <li><a href="#">Fragrance</a></li>
             <li><a href="#">Tools & Brushes</a></li>
         </ul>
-
-        <h3 class="mb-4">Filters</h3>
-        <ul class="mb-4">
+        <h3>Filters</h3>
+        <ul>
             <li><a href="#">Price: Low to High</a></li>
             <li><a href="#">Price: High to Low</a></li>
             <li><a href="#">Best Sellers</a></li>
             <li><a href="#">New Arrivals</a></li>
         </ul>
-
-        <h3 class="mt-4 mb-2"><a href="profile.html">My profile</a></h3>
-        <h3 class="mb-2"><a href="contact.html">Contact</a></h3>
-        <h3><a href="blog.html">Blog</a></h3>
+        <h3>  <a href="profile.html"> My profile </a> </h3>
+        <h3>  <a href= "contact.html"> Contact </a> </h3>
+        <h3>  <a href= "blog.html"> Blog </a> </h3>
     </div>
 
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="img/logo.png" alt="Cosmetics Shop Logo" style="height:40px;">
-            </a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
-                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
-                    <li class="nav-item"><a class="nav-link" href="favorites.html">Favorites</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="sale.html">Sale</a></li>
-                    <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
-                </ul>
-            </div>
-        </div>
+    <nav class="nav">
+        <div id="logo"> <img src="img/logo.png"> </div>
+        <a class="nav_buttons" href="index.html">Home</a>
+        <a class="nav_buttons" href="products.html">Products</a>
+        <a class="nav_buttons" href="blog.html">Blog</a>
+        <a class="nav_buttons" href="cart.html">Cart</a>
+        <a class="nav_buttons" href="favorites.html">Favorites</a>
+        <a class="nav_buttons" href="contact.html">Contact</a>
+        <a class="nav_buttons" href="sale.html">Sale</a>
+        <a class="nav_buttons" href="profile.html">Profile</a>
     </nav>
 
-    <div class="header text-center my-4">
-        <h1 class="header_title mb-3">Your favorites</h1>
-        <p class="header_subtitle">Glam must-haves handpicked by you</p>
+<div class="header">
+    <h1 class="header_title">Your Favorites</h1>
+    <p class="header_subtitle">Glam must-haves handpicked by you</p>
+</div>
+
+
+    <main class="main">
+        <section class="favorites-items">
+
+  <div class="item">
+    <img src="https://korealab.by/image/cache/catalog/unleashia/stojkij-tonalnyj-kushon-unleashia-healthy-green-cushion1-800x800.jpg" alt="Kushon">
+    <div class="details">
+      <p><strong>Unleashia kushon</strong></p>
+      <p>Price: 25$</p>
     </div>
+    <button class="add-to-cart">Add to cart</button>
+  </div>
 
-    <main class="main container my-10">
-        <section class="favorites-items p-3 border rounded mb-4">
+  <div class="item">
+    <img src="https://m.media-amazon.com/images/I/71J+T5sMH1L.jpg" alt="lipstick">
+    <div class="details">
+      <p><strong>Romand lipstick</strong></p>
+      <p>Price: 15$</p>
+    </div>
+    <button class="add-to-cart">Add to cart</button>
+  </div>
 
-            <div class="item mb-3 p-2 border rounded d-flex align-items-center">
-                <img src="https://korealab.by/image/cache/catalog/unleashia/stojkij-tonalnyj-kushon-unleashia-healthy-green-cushion1-800x800.jpg" alt="Kushon" class="me-3" style="width: 100px;">
-                <div class="details flex-grow-1">
-                    <p><strong>Unleashia kushon</strong></p>
-                    <p>Price: 25$</p>
-                </div>
-                <button class="btn-outline btn-sm">Add to cart</button>
-            </div>
+  <div class="item">
+    <img src="https://clubclio.shop/cdn/shop/products/02_dfca1019-bd35-4bbc-9ac2-28ce515c8b45_1500x.jpg?v=1665458015" alt="Lash">
+    <div class="details">
+      <p><strong>Clio mascara</strong></p>
+      <p>Price: 19$</p>
+    </div>
+    <button class="add-to-cart">Add to cart</button>
+  </div>
 
-            <div class="item mb-3 p-2 border rounded d-flex align-items-center">
-                <img src="https://m.media-amazon.com/images/I/71J+T5sMH1L.jpg" alt="Romand lipstick" class="me-3" style="width: 100px;">
-                <div class="details flex-grow-1">
-                    <p><strong>Romand lipstick</strong></p>
-                    <p>Price: 15$</p>
-                </div>
-                <button class="btn-outline btn-sm">Add to cart</button>
-            </div>
-
-            <div class="item mb-3 p-2 border rounded d-flex align-items-center">
-                <img src="https://clubclio.shop/cdn/shop/products/02_dfca1019-bd35-4bbc-9ac2-28ce515c8b45_1500x.jpg?v=1665458015" alt="Clio mascara" class="me-3" style="width: 100px;">
-                <div class="details flex-grow-1">
-                    <p><strong>Clio mascara</strong></p>
-                    <p>Price: 19$</p>
-                </div>
-                <button class="btn-outline btn-sm">Add to cart</button>
-            </div>
-
-            <div class="item mb-3 p-2 border rounded d-flex align-items-center">
-                <img src="https://cdn1.ozone.ru/s3/multimedia-1-v/7092419899.jpg" alt="Amuse eyeshadow palette" class="me-3" style="width: 100px;">
-                <div class="details flex-grow-1">
-                    <p><strong>Amuse eyeshadow palette</strong></p>
-                    <p>Price: 45$</p>
-                </div>
-                <button class="btn-outline btn-sm">Add to cart</button>
-            </div>
+  <div class="item">
+    <img src="https://cdn1.ozone.ru/s3/multimedia-1-v/7092419899.jpg" alt="Eyeshadow Palette">
+    <div class="details">
+      <p><strong>Amuse eyeshadow palette</strong></p>
+      <p>Price: 45$</p>
+    </div>
+    <button class="add-to-cart">Add to cart</button>
+  </div>
 
             <div class="item mb-3 p-2 border rounded d-flex align-items-center">
                 <img src="https://cdn1.ozone.ru/s3/multimedia-1-i/7090481934.jpg" alt="Clio lipstick" class="me-3" style="width: 100px;">
@@ -111,13 +95,12 @@
                 <button class="btn-outline btn-sm">Add to cart</button>
             </div>
         </section>
-</main>
+    </main>
 
-    <footer class="footer text-center py-3 mt-5" style="background-color: #C55583;">
+  <footer class="footer">
         <div class="team_info">
             Team: AmandaLindaRose | Members: Shahnaz.K | Kyrmyzy.Z | Saltanat.B | Erkhan.P
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
