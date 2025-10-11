@@ -280,7 +280,8 @@ button:hover {
 
 @media (max-width: 599px) {
     .featured_panel {
-    grid-template-columns: 1fr; }
+    grid-template-columns: 1fr;
+}
 }
 
 @media (min-width: 600px) {
