@@ -9,7 +9,6 @@
 </head> 
 
 <body>
-
     <div class="sidebar">
         <h3>Categories</h3>
         <ul>
@@ -41,6 +40,7 @@
         <a class="nav_buttons" href="contact.html">Contact</a>
         <a class="nav_buttons" href="sale.html">Sale</a>
         <a class="nav_buttons" href="profile.html">Profile</a>
+        <button id="colorBtn" class="nav_buttons">Change Color</button>
     </nav>
 
 
@@ -87,11 +87,24 @@
         </div>
     </div>
     </section>
+    <div id="dateContainer" style="
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     margin: 20px 0;
+     text-align: center;
+     ">
+    <div id="datetime" style="font-size: 20px; font-weight: bold; color: #333;"></div>
+    <div id="saleCountdown" style="font-size: 24px; color: rgb(156, 41, 74); font-weight: bold; margin-top: 8px;"></div>
+    </div>
+    <script src="task5script.js"></script>
     </div>
     <footer class="footer">
         <div class="team_info">
             Team: AmandaLindaRose | Members: Shahnaz.K | Kyrmyzy.Z | Saltanat.B | Erkhan.P
         </div>
     </footer>
+     <script src="color.js"></script>
 </body>
 </html>

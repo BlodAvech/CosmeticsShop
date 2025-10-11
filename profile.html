@@ -38,6 +38,7 @@
         <a class="nav_buttons" href="contact.html">Contact</a>
         <a class="nav_buttons" href="sale.html">Sale</a>
         <a class="nav_buttons" href="profile.html">Profile</a>
+        <button id="colorBtn" class="nav_buttons">Change Color</button>
     </nav>
 
     <div class="main" id = "main_profile">
@@ -83,10 +84,39 @@
         </form>
     </div>
     <div class="footer">
+
+        <div class="registration">
+            <div class="registration_header">
+                <h2>Registration</h2>
+            </div>
+            <form class="registration_form form">
+                <div class="form_group">
+                    <label for="name">Full Name</label>
+                    <input type="text" name="name" placeholder="Enter your full name">
+                </div>
+                <div class="form_group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" placeholder="Enter your email">
+                </div>
+                <div class="form_group">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" placeholder="Create a password">
+                </div>
+                <div class="form_group">
+                    <label for="confirm_password">Confirm Password</label>
+                    <input type="password" name="confirm_password" placeholder="Confirm your password">
+                </div>
+                <button type="submit" class="register_btn">Register Now</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer text-center py-3 mt-5" role="contentinfo">
         <div class="team_info">
             Team: AmandaLindaRose | Members: Shahnaz.K | Kyrmyzy.Z | Saltanat.B | Erkhan.P
         </div>
     </div>
     <script src="register.js" charset="UTF-8"></script>
+    <script src="color.js"></script>
 </body>
 </html>

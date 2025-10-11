@@ -38,6 +38,7 @@
         <a class="nav_buttons" href="contact.html">Contact</a>
         <a class="nav_buttons" href="sale.html">Sale</a>
         <a class="nav_buttons" href="profile.html">Profile</a>
+        <button id="colorBtn" class="nav_buttons">Change Color</button>
     </nav>
 
     <div class="header">
@@ -53,9 +54,9 @@
                 <img src="https://m.media-amazon.com/images/I/31POGD-KlsL._AC_.jpg" alt="Lipstick">
                 <div class="details">
                     <p><strong>Amuse lipstick</strong></p>
-                    <p>Price: 20$</p>
-                    <input type="number" value="1" readonly>
-                    <button class="remove">Remove</button>
+                    <p>Price: <span class ="cart_item_price">20</span>$</p>
+                    <input type="number" value="1" name = "cart_item_amount" min = "0" oninput="OnCartItemAmountChanged()">
+                    <button class="cart_item_remove">Remove</button>
                 </div>
             </div>
 
@@ -63,9 +64,9 @@
                 <img src="https://img.joomcdn.net/88764d3ddc98d8c2fb00b6d9ab99ea2360163d1f_original.jpeg" alt="eyeshadow">
                 <div class="details">
                     <p><strong>Romand eyeshadow palette</strong></p>
-                    <p>Price: 30$</p>
-                    <input type="number" value="1" readonly>
-                    <button class="remove">Remove</button>
+                    <p>Price: <span class ="cart_item_price">30</span>$</p>
+                    <input type="number" value="1" name = "cart_item_amount" min = "0">
+                    <button class="cart_item_remove">Remove</button>
                 </div>
             </div>
 
@@ -73,9 +74,9 @@
                 <img src="https://toshkent-parfum.uz/media/cache/6a/2f/6a2f325fb5a8a9807d1a1570ebc2e888.webp" alt="Cushion">
                 <div class="details">
                     <p><strong>Clio kushon</strong></p>
-                    <p>Price: 30$</p>
-                    <input type="number" value="1" readonly>
-                    <button class="remove">Remove</button>
+                    <p>Price: <span class ="cart_item_price">30</span>$</p>
+                    <input type="number" value="1" name = "cart_item_amount" min = "0">
+                    <button class="cart_item_remove">Remove</button>
                 </div>
             </div>
 
@@ -83,9 +84,9 @@
                 <img src="https://img.joomcdn.net/5d318e600242dcd413986705a50d0b00e7fca557_original.jpeg" alt="Pencil for brow">
                 <div class="details">
                     <p><strong>Pencil for eyebrow</strong></p>
-                    <p>Price: 7$</p>
-                    <input type="number" value="1" readonly>
-                    <button class="remove">Remove</button>
+                    <p>Price: <span class ="cart_item_price">7</span>$</p>
+                    <input type="number" value="1" name = "cart_item_amount" min = "0">
+                    <button class="cart_item_remove">Remove</button>
                 </div>
 
             </div>
@@ -93,13 +94,13 @@
 
         <section class="cart-summary">
             <h2>Order Summary</h2>
-            <p>Total: 92$<strong></strong></p>
+            <p>Total: <span id = "cart_totalprice">92</span>$<strong></strong></p>
 
-            <form>
-        <label for="email">Enter your email:</label><br>
-        <input type="email" id="email" name="email" placeholder="example@mail.com" required><br><br>
-        <button type="submit" class="checkout">Go to payment</button>
-    </form>
+            <form class = "form">
+                <label for="email">Enter your email:</label><br>
+                <input id="email" name="required" placeholder="example@mail.com" required><br><br>
+                <button type="submit" class="checkout">Go to payment</button>
+            </form>
         </section>
     </main>
 
@@ -108,5 +109,8 @@
             Team: AmandaLindaRose | Members: Shahnaz.K | Kyrmyzy.Z | Saltanat.B | Erkhan.P
         </div>
     </footer>
+     <script src="color.js"></script>
 </body>
+
+<script src = "script.js"></script>
 </html>
