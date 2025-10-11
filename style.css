@@ -34,6 +34,7 @@
 
 
 body {
+    transition: background-color 0.5s ease, color 0.5s ease;
     margin: 0;
     padding: 0;
     min-height: 100vh;
@@ -48,7 +49,7 @@ body {
     display: grid;
     grid-template-columns: 250px 1fr;  
     grid-template-rows: auto auto 1fr auto;
-grid-template-areas:
+    grid-template-areas:
     "head1 head1"
     "head2 head2"
     "side  content"
@@ -163,6 +164,21 @@ button:hover {
     .sidebar{
     flex: 1 1 calc(33.333% - 20px); }
 }
+#colorBtn {
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  margin-left: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#colorBtn:hover {
+  background-color: #ff4081;
+}
+
 
     .accordion { 
         max-width:700px; 
