@@ -3,7 +3,6 @@ const prices = document.querySelectorAll('.cart_item_price');
 const totalPrice = document.querySelector('#cart_totalprice');
 const removeButtons = document.querySelectorAll('.cart_item_remove');
 
-OnCartItemAmountChanged()
 
 function OnCartItemAmountChanged()
 {
@@ -28,54 +27,78 @@ amountInputs.forEach((input , index) => {
 	input.addEventListener('input',() => OnCartItemAmountChanged());
 });
 
+//Form
 const passwordMinLenth = 8;
-const forms = document.querySelectorAll('.form');
+const forms = document.querySelectorAll('form');
+const namePattern = /^[A-Za-z]+$/;
+const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+
+window.formHasError = false;
 
 forms.forEach(form => {
-	form.addEventListener('submit', (e) => {
-	e.preventDefault();
-	let valid = true;
-	let messages = [];
+	form.addEventListener('submit' , (e) => {
+		e.preventDefault();
+		const nameInput = form.querySelector('#name');
+		const emailInput = form.querySelector('#email');
+		const passwordInput = form.querySelector('#password');
+		const confirmPasswordInput = form.querySelector('#confirm_password');
+		
+		let log = "";
 
-	const inputs = form.querySelectorAll('input[required]');
-	const passwordInput = form.querySelector('input[name="password"]');
-	const confirmInput = form.querySelector('input[name="confirm_password"]');
+		window.formHasError = false;
 
-	inputs.forEach(input => {
-		const value = input.value.trim();
-
-		if (!value) {
-			valid = false;
-			messages.push(`${input.name} is required`);
-			return;
-		}
-
-		if (input.type === 'email') {
-			const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-			if (!emailPattern.test(value)) {
-			valid = false;
-			messages.push('Invalid email format');
-		}
-		}
-
-		if (input.name === 'password' && passwordInput) {
-			if (value.length < input.minLength) {
-				valid = false;
-				messages.push(`Password must be at least ${passwordInput} characters`);
+		//Name Input Check
+		if(nameInput != null)
+		{
+			if(!namePattern.test(nameInput.value))
+			{
+				log += "\n Name can contain only words";
+				window.formHasError = true;
 			}
 		}
-	});
 
-	if (passwordInput && confirmInput) {
-		if (passwordInput.value !== confirmInput.value) {
-			valid = false;
-			messages.push('Passwords do not match');
+		//Email Input Check
+		if(emailInput != null)
+		{
+			if(!emailPattern.test(emailInput.value))
+			{
+				log += "\n Uncorect email type";
+				window.formHasError = true;
+			}
 		}
-	}
+		
+		//Password Input Check
+		if(passwordInput != null)
+		{
+			if(passwordInput.value.length < passwordMinLenth)
+			{
+				log += "\n Password can not be less than " + passwordMinLenth;
+				window.formHasError = true;
+			}
+		}
 
-		if (!valid) {
-			alert(messages.join('\n'));
-		} else {
+		//ConfirmPassword Input Check
+		if(confirmPasswordInput != null)
+		{
+			if(passwordInput.value != confirmPasswordInput.value)
+			{
+				log += "\n Passwords is not same";
+				window.formHasError = true;
+			}
+		}
+
+		if(window.formHasError) 
+			{
+				alert(log);
+				if(form.classList.contains('subscribe_form')) onPopupFormSubmit(form , false);
+			}
+		else 
+		{
+			if(form.classList.contains('subscribe_form')) 
+				{
+					onPopupFormSubmit(form , true);
+					return;
+				}
 			form.submit();
 		}
 	});
