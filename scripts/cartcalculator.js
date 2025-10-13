@@ -3,6 +3,7 @@ const prices = document.querySelectorAll('.cart_item_price');
 const totalPrice = document.querySelector('#cart_totalprice');
 const removeButtons = document.querySelectorAll('.cart_item_remove');
 
+OnCartItemAmountChanged();
 
 function OnCartItemAmountChanged()
 {

@@ -3,7 +3,6 @@ const forms = document.querySelectorAll('form');
 const namePattern = /^[A-Za-z]+$/;
 const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
 
-window.formHasError = false;
 
 forms.forEach(form => {
 	form.addEventListener('submit' , (e) => {
@@ -15,7 +14,7 @@ forms.forEach(form => {
 		
 		let log = "";
 
-		window.formHasError = false;
+		let formHasError = false;
 
 		//Name Input Check
 		if(nameInput != null)
@@ -23,7 +22,7 @@ forms.forEach(form => {
 			if(!namePattern.test(nameInput.value))
 			{
 				log += "\n Name can contain only words";
-				window.formHasError = true;
+				formHasError = true;
 			}
 		}
 
@@ -33,7 +32,7 @@ forms.forEach(form => {
 			if(!emailPattern.test(emailInput.value))
 			{
 				log += "\n Uncorect email type";
-				window.formHasError = true;
+				formHasError = true;
 			}
 		}
 		
@@ -43,7 +42,7 @@ forms.forEach(form => {
 			if(passwordInput.value.length < passwordMinLenth)
 			{
 				log += "\n Password can not be less than " + passwordMinLenth;
-				window.formHasError = true;
+				formHasError = true;
 			}
 		}
 
@@ -53,11 +52,11 @@ forms.forEach(form => {
 			if(passwordInput.value != confirmPasswordInput.value)
 			{
 				log += "\n Passwords is not same";
-				window.formHasError = true;
+				formHasError = true;
 			}
 		}
 
-		if(window.formHasError) 
+		if(formHasError) 
 			{
 				alert(log);
 				if(form.classList.contains('subscribe_form')) onPopupFormSubmit(form , false);
