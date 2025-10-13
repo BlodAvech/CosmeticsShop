@@ -1,5 +1,10 @@
-const saleEndDate = new Date();
-saleEndDate.setDate(saleEndDate.getDate() + 7); 
+let saleEndDate = localStorage.getItem("saleEndDate");
+if (!saleEndDate) {
+  const newDate = new Date();
+  newDate.setDate(newDate.getDate() + 7);
+  saleEndDate = newDate.getTime(); 
+  localStorage.setItem("saleEndDate", saleEndDate);
+}
 
 function updateDateTimeAndCountdown() {
   const now = new Date();
@@ -19,6 +24,7 @@ function updateDateTimeAndCountdown() {
 
   if (timeLeft <= 0) {
     document.getElementById("saleCountdown").textContent = "🎉 The sale has ended!";
+    localStorage.removeItem("saleEndDate"); 
     return;
   }
 
