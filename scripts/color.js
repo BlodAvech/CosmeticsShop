@@ -5,15 +5,11 @@ document.addEventListener("DOMContentLoaded", function() {
     let isDarkPink = false;
 
     btn.addEventListener("click", function() {
-      if (!isDarkPink) {
-        document.body.style.backgroundColor = "#de3ca3ff"; // dark pink
+    
+        document.body.style.backgroundColor = (isDarkPink)? "white": "#de3ca3ff"; // dark pink
         document.body.style.transition = "background-color 0.5s ease";
         isDarkPink = true;
-      } else {
-        document.body.style.backgroundColor = "white";
-        document.body.style.transition = "background-color 0.5s ease";
-        isDarkPink = false;
-      }
+     
     });
   }
 });
