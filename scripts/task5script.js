@@ -3,7 +3,7 @@ if (!saleEndDate) {
   const newDate = new Date();
   newDate.setDate(newDate.getDate() + 7);
   saleEndDate = newDate.getTime(); 
-  localStorage.setItem("saleEndDate", saleEndDate);
+    localStorage.setItem("saleEndDate", saleEndDate);
 }
 
 function updateDateTimeAndCountdown() {
