@@ -9,37 +9,40 @@
 
 <body>
     <div class="sidebar">
-        <h3>Categories</h3>
+        <h3 data-lang-key="categories">Categories</h3>
         <ul>
-            <li><a href="#">Makeup</a></li>
-            <li><a href="#">Skincare</a></li>
-            <li><a href="#">Haircare</a></li>
-            <li><a href="#">Fragrance</a></li>
-            <li><a href="#">Tools & Brushes</a></li>
+            <li><a href="#" data-lang-key="makeup">Makeup</a></li>
+            <li><a href="#" data-lang-key="skincare">Skincare</a></li>
+            <li><a href="#" data-lang-key="haircare">Haircare</a></li>
+            <li><a href="#" data-lang-key="fragrance">Fragrance</a></li>
+            <li><a href="#" data-lang-key="tools">Tools & Brushes</a></li>
         </ul>
-        <h3>Filters</h3>
-        <ul>
-            <li><a href="#">Price: Low to High</a></li>
-            <li><a href="#">Price: High to Low</a></li>
-            <li><a href="#">Best Sellers</a></li>
-            <li><a href="#">New Arrivals</a></li>
-        </ul>
-        <h3>  <a href="profile.html"> My profile </a> </h3>
-        <h3>  <a href= "contact.html"> Contact </a> </h3>
-        <h3>  <a href= "blog.html"> Blog </a> </h3>
+
+        <h3><a href="profile.html" data-lang-key="myProfile">My Profile</a></h3>
+        <h3><a href="contact.html" data-lang-key="contactLink">Contact</a></h3>
+        <h3><a href="blog.html" data-lang-key="blogLink">Blog</a></h3>
+
+        <div class="language-box">
+            <h3 data-lang-key="language">Language</h3>
+            <select id="langSelect" class="lang-select">
+                <option value="en">English</option>
+                <option value="ru">Русский</option>
+                <option value="kz">Қазақша</option>
+            </select>
+        </div>
     </div>
 
     <nav class="nav">
-        <div id="logo"> <img src="img/logo.png"> </div>
-        <a class="nav_buttons" href="index.html">Home</a>
-        <a class="nav_buttons" href="products.html">Products</a>
-        <a class="nav_buttons" href="blog.html">Blog</a>
-        <a class="nav_buttons" href="cart.html">Cart</a>
-        <a class="nav_buttons" href="favorites.html">Favorites</a>
-        <a class="nav_buttons" href="contact.html">Contact</a>
-        <a class="nav_buttons" href="sale.html">Sale</a>
-        <a class="nav_buttons" href="profile.html">Profile</a>
-        <button id="colorBtn" class="nav_buttons">Change Color</button>
+        <div id="logo"><img src="img/logo.png"></div>
+        <a class="nav_buttons" href="index.html" data-lang-key="home">Home</a>
+        <a class="nav_buttons" href="products.html" data-lang-key="products">Products</a>
+        <a class="nav_buttons" href="blog.html" data-lang-key="blog">Blog</a>
+        <a class="nav_buttons" href="cart.html" data-lang-key="cart">Cart</a>
+        <a class="nav_buttons" href="favorites.html" data-lang-key="favorites">Favorites</a>
+        <a class="nav_buttons" href="contact.html" data-lang-key="contact">Contact</a>
+        <a class="nav_buttons" href="sale.html" data-lang-key="sale">Sale</a>
+        <a class="nav_buttons" href="profile.html" data-lang-key="profile">Profile</a>
+        <button id="colorBtn" class="nav_buttons" data-lang-key="colorBtn">Change Color</button>
     </nav>
 
     <main class="main">
@@ -67,5 +70,6 @@
     </footer>
     <script src="scripts/color.js"></script>
     <script src="scripts/script.js"></script>
+    <script src="scripts/languageSwitch.js"></script>
 </body>
 </html>

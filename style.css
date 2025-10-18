@@ -41,7 +41,7 @@ body {
     min-height: 100vh;
     margin: 0;
 
-    color: #7A3049;
+    color: #050505;
 
     display: grid;
     grid-template-columns: 250px 1fr;  
@@ -63,7 +63,7 @@ h1, h2, h3 {
 }
 
 button {
-    background: #fc3d9d;
+    background: #db5f9d;
     color: white;
     border: none;
     padding: 8px 12px;
@@ -88,12 +88,12 @@ button:hover {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    color: #7A3049
+    color: #000000
 }
 
 .sidebar a{
     text-decoration: none;
-    color: #7A3049;
+    color: #000000;
     font-size: 16px;
     font-family: 'Verdana', sans-serif;
 }
@@ -246,7 +246,7 @@ button:hover {
 }
 
 .product-price {
-    color: #a02060;
+    color: #000000;
     font-weight: bold;
     margin-bottom: 10px;
 }
@@ -412,7 +412,7 @@ button:hover {
 .favorites-items .details button {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* кнопка всегда внизу */
+    justify-content: space-between; 
     margin-top: 10px;
     padding: 8px 12px;
     background-color: #ff69b4;
@@ -851,3 +851,77 @@ form {
 .contact-form button:hover {
     background: #a02060;
 } 
+
+.focused { /* part 2 Keyboard Event Handling keypress */
+  outline: 3px solid #ff66b2;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.language-box {
+  margin-top: 20px;
+  background: #ffe6f0;
+  padding: 10px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(227, 63, 123, 0.2);
+}
+
+.language-box h3 {
+  color: #000000;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.lang-select {
+  width: 80%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 2px solid #e6b9c9;
+  background-color: white;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.lang-select:hover {
+  background-color: #f17da7;
+  color: white;
+}
+
+.price-buttons {
+  background: linear-gradient(135deg, #f8c8dc, #f885ad);
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.filter-btn {
+  display: block;
+  width: 90%;
+  margin: 8px auto;
+  padding: 10px;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.filter-btn:hover {
+  background: #db7da9;
+  transform: scale(1.05);
+}
+
+.filter-btn.reset {
+  background: #ffd166;
+  color: #333;
+}
+
+.filter-btn.reset:hover {
+  background: #f4a261;
+}

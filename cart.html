@@ -8,37 +8,40 @@
 
 <body>
     <div class="sidebar">
-        <h3>Categories</h3>
+        <h3 data-lang-key="categories">Categories</h3>
         <ul>
-            <li><a href="#">Makeup</a></li>
-            <li><a href="#">Skincare</a></li>
-            <li><a href="#">Haircare</a></li>
-            <li><a href="#">Fragrance</a></li>
-            <li><a href="#">Tools & Brushes</a></li>
+            <li><a href="#" data-lang-key="makeup">Makeup</a></li>
+            <li><a href="#" data-lang-key="skincare">Skincare</a></li>
+            <li><a href="#" data-lang-key="haircare">Haircare</a></li>
+            <li><a href="#" data-lang-key="fragrance">Fragrance</a></li>
+            <li><a href="#" data-lang-key="tools">Tools & Brushes</a></li>
         </ul>
-        <h3>Filters</h3>
-        <ul>
-            <li><a href="#">Price: Low to High</a></li>
-            <li><a href="#">Price: High to Low</a></li>
-            <li><a href="#">Best Sellers</a></li>
-            <li><a href="#">New Arrivals</a></li>
-        </ul>
-        <h3>  <a href="profile.html"> My profile </a> </h3>
-        <h3>  <a href= "contact.html"> Contact </a> </h3>
-        <h3>  <a href= "blog.html"> Blog </a> </h3>
+
+        <h3><a href="profile.html" data-lang-key="myProfile">My Profile</a></h3>
+        <h3><a href="contact.html" data-lang-key="contactLink">Contact</a></h3>
+        <h3><a href="blog.html" data-lang-key="blogLink">Blog</a></h3>
+
+        <div class="language-box">
+            <h3 data-lang-key="language">Language</h3>
+            <select id="langSelect" class="lang-select">
+                <option value="en">English</option>
+                <option value="ru">Русский</option>
+                <option value="kz">Қазақша</option>
+            </select>
+        </div>
     </div>
 
     <nav class="nav">
-        <div id="logo"> <img src="img/logo.png"> </div>
-        <a class="nav_buttons" href="index.html">Home</a>
-        <a class="nav_buttons" href="products.html">Products</a>
-        <a class="nav_buttons" href="blog.html">Blog</a>
-        <a class="nav_buttons" href="cart.html">Cart</a>
-        <a class="nav_buttons" href="favorites.html">Favorites</a>
-        <a class="nav_buttons" href="contact.html">Contact</a>
-        <a class="nav_buttons" href="sale.html">Sale</a>
-        <a class="nav_buttons" href="profile.html">Profile</a>
-        <button id="colorBtn" class="nav_buttons">Change Color</button>
+        <div id="logo"><img src="img/logo.png"></div>
+        <a class="nav_buttons" href="index.html" data-lang-key="home">Home</a>
+        <a class="nav_buttons" href="products.html" data-lang-key="products">Products</a>
+        <a class="nav_buttons" href="blog.html" data-lang-key="blog">Blog</a>
+        <a class="nav_buttons" href="cart.html" data-lang-key="cart">Cart</a>
+        <a class="nav_buttons" href="favorites.html" data-lang-key="favorites">Favorites</a>
+        <a class="nav_buttons" href="contact.html" data-lang-key="contact">Contact</a>
+        <a class="nav_buttons" href="sale.html" data-lang-key="sale">Sale</a>
+        <a class="nav_buttons" href="profile.html" data-lang-key="profile">Profile</a>
+        <button id="colorBtn" class="nav_buttons" data-lang-key="colorBtn">Change Color</button>
     </nav>
 
     <div class="header">
@@ -60,10 +63,22 @@
                 </div>
             </div>
 
-            <div class="item">
-                <img src="https://img.joomcdn.net/88764d3ddc98d8c2fb00b6d9ab99ea2360163d1f_original.jpeg" alt="eyeshadow">
+            
+            <div class="item"> 
+                <img src="https://ir.ozone.ru/s3/multimedia-l/6653411373.jpg" alt="serum">
                 <div class="details">
-                    <p><strong>Romand eyeshadow palette</strong></p>
+                    <p><strong>Skin1004 serum</strong></p>
+                    <p>Price: <span class ="cart_item_price">43</span>$</p>
+                    <input type="number" value="1" name = "cart_item_amount" min = "0">
+                    <button class="cart_item_remove">Remove</button>
+                </div>
+            </div>
+            
+
+            <div class="item"> 
+                <img src="https://cdn1.ozone.ru/s3/multimedia-1-v/7092419899.jpg" alt="eyeshadow">
+                <div class="details">
+                    <p><strong>Amuse eyeshadow palette</strong></p>
                     <p>Price: <span class ="cart_item_price">30</span>$</p>
                     <input type="number" value="1" name = "cart_item_amount" min = "0">
                     <button class="cart_item_remove">Remove</button>
@@ -81,6 +96,16 @@
             </div>
 
             <div class="item">
+                <img src="https://imageproxy.wolt.com/menu/menu-images/60fe89dc3b0012d6dc3919da/74fd0dfc-5484-11ef-9df7-4ee43b95cd7f_celimax_dual_barrier_creamy_toner___1_.jpg" alt="toner">
+                <div class="details">
+                    <p><strong>Celimax toner</strong></p>
+                    <p>Price: <span class ="cart_item_price">65</span>$</p>
+                    <input type="number" value="1" name = "cart_item_amount" min = "0">
+                    <button class="cart_item_remove">Remove</button>
+                </div>
+            </div>
+
+            <div class="item">
                 <img src="https://img.joomcdn.net/5d318e600242dcd413986705a50d0b00e7fca557_original.jpeg" alt="Pencil for brow">
                 <div class="details">
                     <p><strong>Pencil for eyebrow</strong></p>
@@ -88,8 +113,18 @@
                     <input type="number" value="1" name = "cart_item_amount" min = "0">
                     <button class="cart_item_remove">Remove</button>
                 </div>
-
             </div>
+
+            <div class="item">
+                <img src=" https://a.lmcdn.ru/product/M/P/MP002XW13FNP_25478400_1_v2_2x.jpg" alt="Cleanser foam">
+                <div class="details">
+                    <p><strong>Raund lab cleanser foam</strong></p>
+                    <p>Price: <span class ="cart_item_price">25</span>$</p>
+                    <input type="number" value="1" name = "cart_item_amount" min = "0">
+                    <button class="cart_item_remove">Remove</button>
+                </div>
+            </div>
+        
         </section>
 
         <section class="cart-summary">
@@ -112,6 +147,6 @@
     <script src="scripts/color.js"></script>
     <script src = "scripts/script.js"></script>
     <script src = "scripts/cartcalculator.js"></script>
+    <script src="scripts/languageSwitch.js"></script>
 </body>
-
 </html>
