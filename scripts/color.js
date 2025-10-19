@@ -3,9 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   if (btn) {
     let isDarkPink = false;
-     
-    btn.addEventListener("click", function() {
-    
+     btn.addEventListener("click", function() {
         document.body.style.backgroundColor = (isDarkPink) ? "white": "#de3ca3ff"; // dark pink
         document.body.style.transition = "background-color 0.5s ease";
         isDarkPink = true;
