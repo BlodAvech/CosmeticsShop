@@ -9,7 +9,7 @@ class ProductCard
 	}
 
 	render()
-	{``
+	{
 		const template = `
 		<div class="product-card">
 			<img src="${this.imageSrcs}" alt="${this.name}" class="product-img">
@@ -42,7 +42,10 @@ const products = [
 	new ProductCard("Cream", 70, "https://avatars.mds.yandex.net/i?id=fca68245a037f558cda34e4f3df38003_l-5192485-images-thumbs&n=13"),
 	new ProductCard("Amuse palette", 45 , "https://www.letu.ru/common/img/pim/2025/07/TL_8cd315c1-9627-4c39-969a-12db64ecd110.jpg"),
 	new ProductCard("Toner pade", 45 , "https://cdn.100sp.ru/pictures/1806515434"),
-	new ProductCard("Erkhan", 45, ""),
 ]
 
-products.forEach(product => product.render());
+while (products.length > 0)
+{
+	const product = products.shift();
+	product.render();
+}
