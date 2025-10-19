@@ -1,7 +1,8 @@
-const amountInputs = document.querySelectorAll('input[name="cart_item_amount"]');
-const prices = document.querySelectorAll('.cart_item_price');
+let amountInputs = document.querySelectorAll('input[name="cart_item_amount"]');
+let prices = document.querySelectorAll('.cart_item_price');
 const totalPrice = document.querySelector('#cart_totalprice');
-const removeButtons = document.querySelectorAll('.cart_item_remove');
+let removeButtons = document.querySelectorAll('.cart_item_remove');
+
 
 OnCartItemAmountChanged();
 
@@ -17,13 +18,23 @@ function OnCartItemAmountChanged()
 	totalPrice.textContent = sum;
 }
 
-removeButtons.forEach((button , index) => {
-	button.addEventListener('click' , () => {
-		amountInputs[index].value = 0;
-		OnCartItemAmountChanged();
-	});
-});
+function SetInteractives()
+{
+	amountInputs = document.querySelectorAll('input[name="cart_item_amount"]');
+	removeButtons = document.querySelectorAll('.cart_item_remove');
+	prices = document.querySelectorAll('.cart_item_price');
 
-amountInputs.forEach((input , index) => {
-	input.addEventListener('input',() => OnCartItemAmountChanged());
-});
+	OnCartItemAmountChanged();
+	
+	removeButtons.forEach((button , index) => {
+		button.addEventListener('click' , () => {
+			amountInputs[index].value = 0;
+			OnCartItemAmountChanged();
+		});
+	});
+
+	amountInputs.forEach((input , index) => {
+		input.addEventListener('input',() => OnCartItemAmountChanged());
+	});
+}
+
