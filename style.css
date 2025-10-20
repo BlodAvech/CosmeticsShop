@@ -969,7 +969,9 @@ form {
 .filter-btn.reset:hover {
   background: #f4a261;
 }
- .demo-section {
+
+/* SALE PAGE */
+.demo-section {
             background: white;
             padding: 30px;
             margin: 20px;
@@ -1047,8 +1049,6 @@ form {
         .content-demo {
             margin: 20px 0;
             padding: 20px;
-            background: #f9f9f9;
-            border-radius: 10px;
         }
 
         .content-btn {
