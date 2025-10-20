@@ -980,3 +980,126 @@ form {
     cursor: pointer;
     transition: background-color 0.3s
 }
+
+        .demo-section {
+            background: white;
+            padding: 30px;
+            margin: 20px;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid #f8c8dc;
+        }
+        
+        .stars {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+        
+        .star {
+            color: #ddd;
+            transition: all 0.3s ease;
+        }
+        
+        .star:hover {
+            transform: scale(1.3);
+        }
+        
+        .star.active {
+            color: gold;
+            text-shadow: 0 0 10px gold;
+        }
+        
+        .read-more-content {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        
+        .short-text {
+            display: block;
+        }
+        
+        .full-text {
+            display: none;
+        }
+        
+        .read-more-btn {
+            background: #db5f9d;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+        
+        .style-controls {
+            margin: 20px 0;
+        }
+        
+        .style-btn {
+            background: #db5f9d;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+            font-size: 14px;
+        }
+        
+        .style-btn:hover {
+            background: #f885ad;
+        }
+        
+        body.dark-theme {
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+        }
+        
+        body.dark-theme .sidebar {
+            background-color: #2d2d2d;
+        }
+        
+        body.dark-theme .nav {
+            background-color: #3a2a35;
+        }
+        
+        body.dark-theme .demo-section {
+            background: #2d2d2d;
+            color: #e0e0e0;
+        }
+        
+        body.dark-theme .sale-card {
+            background: #3d3d3d;
+            color: #e0e0e0;
+        }
+        
+        body.dark-theme .footer {
+            background-color: #2d2d2d;
+            color: #e0e0e0;
+        }
+        .sale-card.pink-theme {
+            background: linear-gradient(135deg, #ffafbd, #ffa0e9);
+            border-color: #ff85c2;
+        }
+        
+        .sale-card.blue-theme {
+            background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+            border-color: #89b4f8;
+        }
+        
+        .sale-card.green-theme {
+            background: linear-gradient(135deg, #84fab0, #8fd3f4);
+            border-color: #5cdb95;
+        }
+        
+        .sale-card.purple-theme {
+            background: linear-gradient(135deg, #ff93ef, #da96e6);
+            border-color: #e6a8e6;
+        }
+        

@@ -2,6 +2,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuLinks = document.querySelectorAll(".nav .nav_buttons");
   let currentIndex = 0;
 
+  console.log(document.location.href);
+  menuLinks.forEach((link , index) => {
+    if(link.href == document.location.href)
+    {
+      currentIndex = index;
+    }
+  });
   menuLinks[currentIndex].classList.add("focused");
 
   document.addEventListener("keydown", (event) => {
