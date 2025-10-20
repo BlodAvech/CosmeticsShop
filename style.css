@@ -969,19 +969,7 @@ form {
 .filter-btn.reset:hover {
   background: #f4a261;
 }
-
-#themeToggle { 
-    background-color: #ff69b4;
-    color: white;
-    border: none;
-    padding: 8px 14px;
-    border-radius: 8px;
-    margin-left: 15px;
-    cursor: pointer;
-    transition: background-color 0.3s
-}
-
-        .demo-section {
+ .demo-section {
             background: white;
             padding: 30px;
             margin: 20px;
@@ -1056,6 +1044,33 @@ form {
             background: #f885ad;
         }
         
+        .content-demo {
+            margin: 20px 0;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+        }
+
+        .content-btn {
+            background: #db5f9d;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+            font-size: 14px;
+        }
+
+        .dynamic-content {
+            margin: 15px 0;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #f8c8dc;
+            min-height: 60px;
+        }
+        
         body.dark-theme {
             background-color: #1a1a1a;
             color: #e0e0e0;
@@ -1083,6 +1098,16 @@ form {
             background-color: #2d2d2d;
             color: #e0e0e0;
         }
+
+        body.dark-theme .content-demo {
+            background: #3d3d3d;
+        }
+
+        body.dark-theme .dynamic-content {
+            background: #2d2d2d;
+            border-color: #555;
+        }
+        
         .sale-card.pink-theme {
             background: linear-gradient(135deg, #ffafbd, #ffa0e9);
             border-color: #ff85c2;
@@ -1102,4 +1127,3 @@ form {
             background: linear-gradient(135deg, #ff93ef, #da96e6);
             border-color: #e6a8e6;
         }
-        
