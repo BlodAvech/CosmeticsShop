@@ -5,7 +5,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sale</title>
     <link rel="stylesheet" href="style.css">
-    
+    <style>
+        .demo-section {
+            background: white;
+            padding: 30px;
+            margin: 20px;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid #f8c8dc;
+        }
+        
+        .stars {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+        
+        .star {
+            color: #ddd;
+            transition: all 0.3s ease;
+        }
+        
+        .star:hover {
+            transform: scale(1.3);
+        }
+        
+        .star.active {
+            color: gold;
+            text-shadow: 0 0 10px gold;
+        }
+        
+        .read-more-content {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        
+        .short-text {
+            display: block;
+        }
+        
+        .full-text {
+            display: none;
+        }
+        
+        .read-more-btn {
+            background: #db5f9d;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+        
+        .style-controls {
+            margin: 20px 0;
+        }
+        
+        .style-btn {
+            background: #db5f9d;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+            font-size: 14px;
+        }
+        
+        .style-btn:hover {
+            background: #f885ad;
+        }
+        
+        body.dark-theme {
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+        }
+        
+        body.dark-theme .sidebar {
+            background-color: #2d2d2d;
+        }
+        
+        body.dark-theme .nav {
+            background-color: #3a2a35;
+        }
+        
+        body.dark-theme .demo-section {
+            background: #2d2d2d;
+            color: #e0e0e0;
+        }
+        
+        body.dark-theme .sale-card {
+            background: #3d3d3d;
+            color: #e0e0e0;
+        }
+        
+        .sale-card.pink-theme {
+            background: linear-gradient(135deg, #ffafbd, #ffa0e9);
+            border-color: #ff85c2;
+        }
+        
+        .sale-card.blue-theme {
+            background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+            border-color: #89b4f8;
+        }
+        
+        .sale-card.green-theme {
+            background: linear-gradient(135deg, #84fab0, #8fd3f4);
+            border-color: #5cdb95;
+        }
+        
+        .sale-card.purple-theme {
+            background: linear-gradient(135deg, #eb6dd8, #da96e6);
+            border-color: #e6a8e6;
+        }
+        
+    </style>
 </head> 
 
 <body>
@@ -44,68 +163,226 @@
         <a class="nav_buttons" href="contact.html" data-lang-key="contact">Contact</a>
         <a class="nav_buttons" href="sale.html" data-lang-key="sale">Sale</a>
         <a class="nav_buttons" href="profile.html" data-lang-key="profile">Profile</a>
+        <button id="themeToggle" class="nav_buttons">Night Mode</button>
         <button id="colorBtn" class="nav_buttons" data-lang-key="colorBtn">Change Color</button>
     </nav>
 
     <div class="main">
-    <section class="sale-section">
-        
-    <div class="sale-card" width ="300" height="300">
-        <img src="https://avatars.mds.yandex.net/i?id=d6c39f2e3e09bfe1337aeff5f23ff0f96b73d875-4507655-images-thumbs&n=13">  
-        <div class="sale-product-info"> 
-            <h3> lipstick </h3>
-            <p>15$</p> 
-            <button class="like">like</button>
-            <button class="cart">add to cart</button>
-        </div>
-    </div>
-
-    <div class="sale-card" weight="300" height="300">
-            <img src="https://avatars.mds.yandex.net/i?id=a7a13ffed538684e847072ab6db1863585461106-5222233-images-thumbs&n=13">  
-            <div class="sale-product-info"> 
-                <h3> kushon </h3>
-                <p>18$</p> 
-                <button class="like">like</button>
-                <button class="cart">add to cart</button>
+        <section class="demo-section">
+            <div class="rating-demo">
+                <h3>Rate Our Products</h3>
+                <div class="stars" id="ratingStars">
+                    <span class="star" data-value="1">★</span>
+                    <span class="star" data-value="2">★</span>
+                    <span class="star" data-value="3">★</span>
+                    <span class="star" data-value="4">★</span>
+                    <span class="star" data-value="5">★</span>
+                </div>
+                <p>Your rating: <span id="ratingValue">0</span>/5</p>
+                <p id="ratingMessage">Click stars to rate our products!</p>
             </div>
-    </div>
 
-    <div class="sale-card" weight="300" height="300">
-            <img src="https://resources.cdn-kaspi.kz/img/m/p/h4a/h3f/80681068527646.jpg?format=gallery-large">
-            <div class="sale-product-info">     
-                <h3> pallete </h3>
-                <p>16$</p> 
-                <button class="like">like</button>
-                <button class="cart">add to cart</button>
+            <div class="read-more-demo">
+                <h3>📖 Product Details</h3>
+                <div class="read-more-content">
+                    <span class="short-text">Discover our amazing sale products with incredible discounts! We have lipsticks, cushions, palettes and many more beauty products...</span>
+                    <span class="full-text">Discover our amazing sale products with incredible discounts! We have lipsticks, cushions, palettes and many more beauty products waiting for you. All our products are cruelty-free, made with high-quality ingredients, and designed to make you feel confident and beautiful. Don't miss this opportunity to get your favorite cosmetics at the best prices!</span>
+                    <button class="read-more-btn">Read More</button>
+                </div>
             </div>
-    </div>
 
-    <div class="sale-card" weight="300" height="300">
-        <img src="https://img.joomcdn.net/346f56c7c04878d38511f669604747bb541b71bb_original.jpeg">
-        <div class="sale-product-info">     
-            <h3> kushon </h3>
-            <p>13$</p> 
-            <button class="like">like</button>
-            <button class="cart">add to cart</button>
-        </div>
-    </div>
-    </section>
+            <div class="style-demo">
+                <h3>Customize Card Colors</h3>
+                <div class="style-controls">
+                    <button class="style-btn" data-theme="pink-theme">Pink Cards</button>
+                    <button class="style-btn" data-theme="blue-theme">Blue Cards</button>
+                    <button class="style-btn" data-theme="green-theme">Green Cards</button>
+                    <button class="style-btn" data-theme="purple-theme">Purple Cards</button>
+                    <button class="style-btn" data-theme="original-theme">Original Cards</button>
+                </div>
+            </div>
+        </section>
 
-    <div id="dateContainer" style="text-align: center; margin: 20px 0;"> 
-        <button id="showTimeBtn" style="padding: 15px 20px; background-color: #e75a8d; color: white; border: none; border-radius: 10px; cursor: pointer;">Show Current Time</button>
+        <section class="sale-section" id="productCards">
+            <div class="sale-card">
+                <img src="https://avatars.mds.yandex.net/i?id=d6c39f2e3e09bfe1337aeff5f23ff0f96b73d875-4507655-images-thumbs&n=13">  
+                <div class="sale-product-info"> 
+                    <h3>Lipstick</h3>
+                    <p>15$</p>
+                    <button class="like">like</button>
+                    <button class="cart">add to cart</button>
+                </div>
+            </div>
+
+            <div class="sale-card">
+                <img src="https://avatars.mds.yandex.net/i?id=a7a13ffed538684e847072ab6db1863585461106-5222233-images-thumbs&n=13">  
+                <div class="sale-product-info"> 
+                    <h3>Cushion</h3>
+                    <p>18$</p>
+                    <button class="like">like</button>
+                    <button class="cart">add to cart</button>
+                </div>
+            </div>
+
+            <div class="sale-card">
+                <img src="https://resources.cdn-kaspi.kz/img/m/p/h4a/h3f/80681068527646.jpg?format=gallery-large">
+                <div class="sale-product-info">     
+                    <h3>Palette</h3>
+                    <p>16$</p>
+                    <button class="like">like</button>
+                    <button class="cart">add to cart</button>
+                </div>
+            </div>
+
+            <div class="sale-card">
+                <img src="https://img.joomcdn.net/346f56c7c04878d38511f669604747bb541b71bb_original.jpeg">
+                <div class="sale-product-info">     
+                    <h3>Cushion</h3>
+                    <p>13$</p>
+                    <button class="like">like</button>
+                    <button class="cart">add to cart</button>
+                </div>
+            </div>
+        </section>
+
+        <div id="dateContainer" style="text-align: center; margin: 20px 0;"> 
+            <button id="showTimeBtn" style="padding: 15px 20px; background-color: #e75a8d; color: white; border: none; border-radius: 10px; cursor: pointer;">Show Current Time</button>
             <div id="datetime" style="font-size: 20px; font-weight: bold; color: #333; margin-top: 10px;"></div>
+        </div>
     </div>
 
-    <script src="scripts/datetime.js"></script>
-    </div>
     <footer class="footer">
         <div class="team_info">
             Team: AmandaLindaRose | Members: Shahnaz.K | Kyrmyzy.Z | Saltanat.B | Erkhan.P
         </div>
     </footer>
-     <script src="scripts/color.js"></script>
-     <script src="scripts/languageSwitch.js"></script>
-    <script src="scripts/keyboard.js"></script>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+            console.log('querySelector:', document.querySelector('.star'));
+            console.log('querySelectorAll:', document.querySelectorAll('.star'));
+            console.log('getElementById:', document.getElementById('ratingValue'));
+            
+            setupRatingSystem();
+            setupReadMore();
+            setupCardStyles();
+            setupThemeToggle();
+        });
+
+        function setupRatingSystem() {
+            const stars = document.querySelectorAll('#ratingStars .star');
+            const ratingValue = document.getElementById('ratingValue');
+            const ratingMessage = document.getElementById('ratingMessage');
+            
+            let currentRating = 0;
+            
+            stars.forEach(star => {
+                star.addEventListener('click', function() {
+                    const value = parseInt(this.getAttribute('data-value'));
+                    currentRating = value;
+                    
+                    ratingValue.textContent = value;
+                    
+                    const messages = [
+                        "Please select rating",
+                        "Poor",
+                        "Fair", 
+                        "Good",
+                        "Very Good",
+                        "Excellent"
+                    ];
+                    ratingMessage.innerHTML = `<strong>${messages[value]}</strong>`;
+                    
+                    
+                    stars.forEach((s, index) => {
+                        if (index < value) {
+                            s.classList.add('active');
+                        } else {
+                            s.classList.remove('active');
+                        }
+                    });
+                });
+            });
+        }
+
+        function setupReadMore() {
+            const readMoreBtn = document.querySelector('.read-more-btn');
+            const shortText = document.querySelector('.short-text');
+            const fullText = document.querySelector('.full-text');
+            
+            let isExpanded = false;
+            
+            readMoreBtn.addEventListener('click', function() {
+                if (!isExpanded) {
+                    shortText.style.display = 'none';
+                    fullText.style.display = 'block';
+                    readMoreBtn.textContent = 'Read Less';
+                    isExpanded = true;
+                } else {
+                    shortText.style.display = 'block';
+                    fullText.style.display = 'none';
+                    readMoreBtn.textContent = 'Read More';
+                    isExpanded = false;
+                }
+            });
+        }
+
+        function setupCardStyles() {
+            const styleButtons = document.querySelectorAll('.style-btn');
+            const saleCards = document.querySelectorAll('.sale-card');
+            
+            styleButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const theme = this.getAttribute('data-theme');
+                    saleCards.forEach(card => {
+                        card.classList.remove('pink-theme', 'blue-theme', 'green-theme', 'purple-theme', 'original-theme');
+                        if (theme !== 'original-theme') {
+                            card.classList.add(theme);
+                        }
+                    });
+                    
+                    const themeNames = {
+                        'pink-theme': 'Pink',
+                        'blue-theme': 'Blue', 
+                        'green-theme': 'Green',
+                        'purple-theme': 'Purple',
+                        'original-theme': 'Original'
+                    };
+                });
+            });
+        }
+
+        
+        function setupThemeToggle() {
+            const themeToggle = document.getElementById('themeToggle');
+            
+            
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            setTheme(savedTheme);
+            
+            themeToggle.addEventListener('click', function() {
+                const currentTheme = document.body.classList.contains('dark-theme') ? 'dark' : 'light';
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                setTheme(newTheme);
+            });
+            
+            function setTheme(theme) {
+                if (theme === 'dark') {
+                    document.body.classList.add('dark-theme');
+                    themeToggle.textContent = 'Day Mode';
+                } else {
+                    document.body.classList.remove('dark-theme');
+                    themeToggle.textContent = 'Night Mode';
+                }
+                localStorage.setItem('theme', theme);
+            }
+        }
+    </script>
+
+    <script src="scripts/datetime.js"></script>
+    <script src="scripts/color.js"></script>
+    <script src="scripts/languageSwitch.js"></script>
+    <script src="scripts/keyboard.js"></script>
 </body>
 </html>
