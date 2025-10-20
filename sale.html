@@ -81,6 +81,33 @@
             background: #f885ad;
         }
         
+        .content-demo {
+            margin: 20px 0;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+        }
+
+        .content-btn {
+            background: #db5f9d;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+            font-size: 14px;
+        }
+
+        .dynamic-content {
+            margin: 15px 0;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #f8c8dc;
+            min-height: 60px;
+        }
+        
         body.dark-theme {
             background-color: #1a1a1a;
             color: #e0e0e0;
@@ -108,6 +135,16 @@
             background-color: #2d2d2d;
             color: #e0e0e0;
         }
+
+        body.dark-theme .content-demo {
+            background: #3d3d3d;
+        }
+
+        body.dark-theme .dynamic-content {
+            background: #2d2d2d;
+            border-color: #555;
+        }
+        
         .sale-card.pink-theme {
             background: linear-gradient(135deg, #ffafbd, #ffa0e9);
             border-color: #ff85c2;
@@ -127,7 +164,6 @@
             background: linear-gradient(135deg, #ff93ef, #da96e6);
             border-color: #e6a8e6;
         }
-        
     </style>
 </head> 
 
@@ -174,7 +210,7 @@
     <div class="main">
         <section class="demo-section">
             <div class="rating-demo">
-                <h3>Rate Our Products</h3>
+                <h3>Rate Our Sale Products</h3>
                 <div class="stars" id="ratingStars">
                     <span class="star" data-value="1">★</span>
                     <span class="star" data-value="2">★</span>
@@ -183,27 +219,41 @@
                     <span class="star" data-value="5">★</span>
                 </div>
                 <p>Your rating: <span id="ratingValue">0</span>/5</p>
-                <p id="ratingMessage">Click stars to rate our products!</p>
+                <p id="ratingMessage">Click stars to rate our sale items!</p>
             </div>
 
             <div class="read-more-demo">
-                <h3>📖 Product Details</h3>
+                <h3>Hot Sale Details</h3>
                 <div class="read-more-content">
-                    <span class="short-text">Discover our amazing sale products with incredible discounts! We have lipsticks, cushions, palettes and many more beauty products...</span>
-                    <span class="full-text">Discover our amazing sale products with incredible discounts! We have lipsticks, cushions, palettes and many more beauty products waiting for you. All our products are cruelty-free, made with high-quality ingredients, and designed to make you feel confident and beautiful. Don't miss this opportunity to get your favorite cosmetics at the best prices!</span>
-                    <button class="read-more-btn">Read More</button>
+                    <span class="short-text">Limited time sale! Get amazing discounts on premium cosmetics - lipsticks, cushions, palettes and more beauty essentials...</span>
+                    <span class="full-text">Limited time sale! Get amazing discounts on premium cosmetics - lipsticks, cushions, palettes and more beauty essentials. All sale items are high-quality, cruelty-free products perfect for your beauty collection. Don't miss these exclusive deals - shop now and save big on your favorite brands!</span>
+                    <button class="read-more-btn">Show More Details</button>
                 </div>
             </div>
 
             <div class="style-demo">
-                <h3>Customize Card Colors</h3>
+                <h3>Style Sale Cards</h3>
                 <div class="style-controls">
-                    <button class="style-btn" data-theme="pink-theme">Pink Cards</button>
-                    <button class="style-btn" data-theme="blue-theme">Blue Cards</button>
-                    <button class="style-btn" data-theme="green-theme">Green Cards</button>
-                    <button class="style-btn" data-theme="purple-theme">Purple Cards</button>
-                    <button class="style-btn" data-theme="original-theme">Original Cards</button>
+                    <button class="style-btn" data-theme="pink-theme">Pink Style</button>
+                    <button class="style-btn" data-theme="blue-theme">Blue Style</button>
+                    <button class="style-btn" data-theme="green-theme">Green Style</button>
+                    <button class="style-btn" data-theme="purple-theme">Purple Style</button>
+                    <button class="style-btn" data-theme="original-theme">Default Style</button>
                 </div>
+            </div>
+
+            <div class="content-demo">
+                <h3>Update Sale Info</h3>
+                <div class="content-controls">
+                    <button class="content-btn" id="saleInfoBtn">Show Sale Info</button>
+                    <button class="content-btn" id="discountsBtn">View Discounts</button>
+                    <button class="content-btn" id="featuresBtn">Product Features</button>
+                    <button class="content-btn" id="resetContentBtn">Reset Info</button>
+                </div>
+                <div class="dynamic-content" id="dynamicContent">
+                    Welcome to our exclusive sale section! Click buttons to see different sale information.
+                </div>
+                <p><small>Dynamic content updates using innerHTML</small></p>
             </div>
         </section>
 
@@ -212,9 +262,9 @@
                 <img src="https://avatars.mds.yandex.net/i?id=d6c39f2e3e09bfe1337aeff5f23ff0f96b73d875-4507655-images-thumbs&n=13">  
                 <div class="sale-product-info"> 
                     <h3>Lipstick</h3>
-                    <p>15$</p>
-                    <button class="like">like</button>
-                    <button class="cart">add to cart</button>
+                    <p><strong>15$</strong> <span style="color: #db5f9d; text-decoration: line-through;">25$</span></p>
+                    <button class="like">Add to Favorites</button>
+                    <button class="cart">Buy Now</button>
                 </div>
             </div>
 
@@ -222,9 +272,9 @@
                 <img src="https://avatars.mds.yandex.net/i?id=a7a13ffed538684e847072ab6db1863585461106-5222233-images-thumbs&n=13">  
                 <div class="sale-product-info"> 
                     <h3>Cushion</h3>
-                    <p>18$</p>
-                    <button class="like">like</button>
-                    <button class="cart">add to cart</button>
+                    <p><strong>18$</strong> <span style="color: #db5f9d; text-decoration: line-through;">30$</span></p>
+                    <button class="like">Add to Favorites</button>
+                    <button class="cart">Buy Now</button>
                 </div>
             </div>
 
@@ -232,9 +282,9 @@
                 <img src="https://resources.cdn-kaspi.kz/img/m/p/h4a/h3f/80681068527646.jpg?format=gallery-large">
                 <div class="sale-product-info">     
                     <h3>Palette</h3>
-                    <p>16$</p>
-                    <button class="like">like</button>
-                    <button class="cart">add to cart</button>
+                    <p><strong>16$</strong> <span style="color: #db5f9d; text-decoration: line-through;">28$</span></p>
+                    <button class="like">Add to Favorites</button>
+                    <button class="cart">Buy Now</button>
                 </div>
             </div>
 
@@ -242,9 +292,9 @@
                 <img src="https://img.joomcdn.net/346f56c7c04878d38511f669604747bb541b71bb_original.jpeg">
                 <div class="sale-product-info">     
                     <h3>Cushion</h3>
-                    <p>13$</p>
-                    <button class="like">like</button>
-                    <button class="cart">add to cart</button>
+                    <p><strong>13$</strong> <span style="color: #db5f9d; text-decoration: line-through;">22$</span></p>
+                    <button class="like">Add to Favorites</button>
+                    <button class="cart">Buy Now</button>
                 </div>
             </div>
         </section>
@@ -263,7 +313,6 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-
             console.log('querySelector:', document.querySelector('.star'));
             console.log('querySelectorAll:', document.querySelectorAll('.star'));
             console.log('getElementById:', document.getElementById('ratingValue'));
@@ -272,6 +321,7 @@
             setupReadMore();
             setupCardStyles();
             setupThemeToggle();
+            setupContentDemo();
         });
 
         function setupRatingSystem() {
@@ -290,14 +340,13 @@
                     
                     const messages = [
                         "Please select rating",
-                        "Poor",
-                        "Fair", 
-                        "Good",
-                        "Very Good",
-                        "Excellent"
+                        "Not satisfied",
+                        "Could be better", 
+                        "Good deal",
+                        "Great value",
+                        "Excellent purchase!"
                     ];
                     ratingMessage.innerHTML = `<strong>${messages[value]}</strong>`;
-                    
                     
                     stars.forEach((s, index) => {
                         if (index < value) {
@@ -321,12 +370,12 @@
                 if (!isExpanded) {
                     shortText.style.display = 'none';
                     fullText.style.display = 'block';
-                    readMoreBtn.textContent = 'Read Less';
+                    readMoreBtn.textContent = 'Show Less';
                     isExpanded = true;
                 } else {
                     shortText.style.display = 'block';
                     fullText.style.display = 'none';
-                    readMoreBtn.textContent = 'Read More';
+                    readMoreBtn.textContent = 'Show More Details';
                     isExpanded = false;
                 }
             });
@@ -345,22 +394,12 @@
                             card.classList.add(theme);
                         }
                     });
-                    
-                    const themeNames = {
-                        'pink-theme': 'Pink',
-                        'blue-theme': 'Blue', 
-                        'green-theme': 'Green',
-                        'purple-theme': 'Purple',
-                        'original-theme': 'Original'
-                    };
                 });
             });
         }
 
-        
         function setupThemeToggle() {
             const themeToggle = document.getElementById('themeToggle');
-            
             
             const savedTheme = localStorage.getItem('theme') || 'light';
             setTheme(savedTheme);
@@ -381,6 +420,60 @@
                 }
                 localStorage.setItem('theme', theme);
             }
+        }
+
+        function setupContentDemo() {
+            const saleInfoBtn = document.getElementById('saleInfoBtn');
+            const discountsBtn = document.getElementById('discountsBtn');
+            const featuresBtn = document.getElementById('featuresBtn');
+            const resetContentBtn = document.getElementById('resetContentBtn');
+            const dynamicContent = document.getElementById('dynamicContent');
+
+            const originalContent = dynamicContent.innerHTML;
+
+            saleInfoBtn.addEventListener('click', function() {
+                dynamicContent.innerHTML = `
+                    <h4 style="color: #db5f9d; margin-bottom: 10px;">Exclusive Sale Information</h4>
+                    <p><strong>Limited Time Offer!</strong> All products are <span style="color: #e75a8d;">30-50% OFF</span> original prices.</p>
+                    <p>Sale ends in: <strong>3 days</strong></p>
+                    <p>Free shipping on orders over $50</p>
+                    <p>Bonus: Buy 2 get 1 free on selected items!</p>
+                `;
+            });
+
+            discountsBtn.addEventListener('click', function() {
+                dynamicContent.innerHTML = `
+                    <h4 style="color: #db5f9d; margin-bottom: 10px;">Current Discounts</h4>
+                    <ul style="text-align: left;">
+                        <li>Lipsticks: <strong>40% OFF</strong> - Now $15 (was $25)</li>
+                        <li>Cushions: <strong>40% OFF</strong> - Now $18 (was $30)</li>
+                        <li>Palettes: <strong>43% OFF</strong> - Now $16 (was $28)</li>
+                        <li>Cushions: <strong>41% OFF</strong> - Now $13 (was $22)</li>
+                    </ul>
+                    <p style="margin-top: 10px;"><em>All discounts are automatically applied at checkout!</em></p>
+                `;
+            });
+
+            featuresBtn.addEventListener('click', function() {
+                dynamicContent.innerHTML = `
+                    <h4 style="color: #db5f9d; margin-bottom: 10px;">Product Features</h4>
+                    <div style="text-align: left;">
+                        <p><strong>All our sale products include:</strong></p>
+                        <ul>
+                            <li><strong>Cruelty-free</strong> formulas</li>
+                            <li><strong>Premium quality</strong> ingredients</li>
+                            <li><strong>Long-lasting</strong> performance</li>
+                            <li><strong>Vegan options</strong> available</li>
+                            <li><strong>Hypoallergenic</strong> for sensitive skin</li>
+                        </ul>
+                        <p style="margin-top: 10px;"><strong>Bonus:</strong> All products come with 30-day satisfaction guarantee!</p>
+                    </div>
+                `;
+            });
+
+            resetContentBtn.addEventListener('click', function() {
+                dynamicContent.innerHTML = originalContent;
+            });
         }
     </script>
 
