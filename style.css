@@ -971,6 +971,16 @@ form {
 }
 
 /* SALE PAGE */
+#themeToggle{
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    margin-left: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
 .demo-section {
             background: white;
             padding: 30px;
@@ -1051,7 +1061,7 @@ form {
             padding: 20px;
         }
 
-        .content-btn {
+        .content-btn, .showTimeBtn {
             background: #db5f9d;
             color: white;
             border: none;
@@ -1124,6 +1134,7 @@ form {
         }
         
         .sale-card.purple-theme {
+
             background: linear-gradient(135deg, #ff93ef, #da96e6);
             border-color: #e6a8e6;
         }
