@@ -7,6 +7,7 @@ class CartCard
 		this.imgSrc = imgSrc;
 		this.amount = amount;
 		this.containerSelector = document.getElementById("cart_cards_container");
+	
 	}
 
 	render()
@@ -29,7 +30,7 @@ class CartCard
 
 //	new CartCard("", 0, ""),
 
-window.cartItems = [
+cartItems = [
 	new CartCard("Amuse lipstick", 20, "https://m.media-amazon.com/images/I/31POGD-KlsL._AC_.jpg" , 1),
 	new CartCard("Skin1004 Serum", 43, "https://ir.ozone.ru/s3/multimedia-l/6653411373.jpg", 1),
 	new CartCard("Amuse eyeshadow palette", 30, "https://cdn1.ozone.ru/s3/multimedia-1-v/7092419899.jpg", 1),
@@ -40,8 +41,12 @@ window.cartItems = [
 ];
 
 
-if (window.location.pathname.includes("cart.html")) {
-	window.cartItems.forEach(cartItem => cartItem.render());
+if (window.location.pathname.includes("cart.html")) UpdateUI();
+
+function UpdateUI()
+{
+	cartItems.forEach(cartItem => cartItem.render());
 }
 
 SetInteractives();
+

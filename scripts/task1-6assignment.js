@@ -1,8 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-            console.log('querySelector:', document.querySelector('.star'));
-            console.log('querySelectorAll:', document.querySelectorAll('.star'));
-            console.log('getElementById:', document.getElementById('ratingValue'));
-            
             setupRatingSystem();
             setupReadMore();
             setupCardStyles();

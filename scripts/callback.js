@@ -25,18 +25,18 @@ form.addEventListener('submit', (e) => {
     })
     .then(response => {
         if (!response.ok) {
-            throw new Error('Ошибка сервера: ' + response.status);
+            throw new Error('Server error: ' + response.status);
         }
         return response.json();
     })
     .then(data => {
-        console.log('Успех:', data);
-        showMessage('Сообщение успешно отправлено!', 'success');
+        console.log('Success:', data);
+        showMessage('Message sent successfully!', 'success');
         form.reset(); 
     })
     .catch(error => {
-        console.error('Ошибка:', error);
-        showMessage('Произошла ошибка при отправке: ' + error.message, 'error');
+        console.error('Error:', error);
+        showMessage('There was an error sending: ' + error.message, 'error');
     })
     .finally(() => {
         submitButton.textContent = submitButtonDefaultText;
