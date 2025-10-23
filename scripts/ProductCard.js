@@ -12,7 +12,7 @@ class ProductCard
 	{
 		const template = `
 		<div class="product-card">
-			<img src="${this.imageSrcs}" alt="${this.name}" class="product-img">
+			<img data-src="${this.imageSrcs}" alt="${this.name}" class="product-img lazy">
 			<h3 class="product-name">${this.name}</h3>
 			<p class="product-price">Price: $${this.price}</p>
 			<button class="btn-cart">Add to Cart</button>
@@ -44,4 +44,8 @@ class ProductCard
 		new ProductCard("Toner pade", 45 , "https://cdn.100sp.ru/pictures/1806515434"),
 	]
 
+	for(let i = 0 ; i < 1000 ; i++)
+	{
+		products.push(new ProductCard("Kushon", 15, "img/kushon.png"));
+	}
 	products.forEach(product => product.render());
