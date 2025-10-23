@@ -1138,3 +1138,15 @@ form {
             background: linear-gradient(135deg, #ff93ef, #da96e6);
             border-color: #e6a8e6;
         }
+
+#FindTextInput
+{
+    margin: 0px 100px;
+}
+
+h3:has(mark) {
+	display: inline !important;
+}
+
+
+
