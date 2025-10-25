@@ -1149,4 +1149,15 @@ h3:has(mark) {
 }
 
 
+#FindTextInput {
+  width: 220px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #aaa;
+  text-align: center;
+}
 
+.highlight {
+  background-color: yellow;
+  font-weight: bold;
+}
