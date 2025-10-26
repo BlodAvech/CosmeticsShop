@@ -56,6 +56,7 @@ $(document).ready(function () {
     $(".product-card").filter(function () {
       const name = $(this).find(".product-name").text().toLowerCase();
       $(this).toggle(name.indexOf(query) > -1);
+      checkImgLoading();
     });
 
     // --- Task 2: Autocomplete Suggestions ---
