@@ -54,14 +54,10 @@ body {
 
 
 } 
-
-
-
 h1, h2, h3 {
     font-family: "Playfair Display", serif;
     margin: 0;
 }
-
 button {
     background: #db5f9d;
     color: white;
@@ -70,7 +66,6 @@ button {
     border-radius: 8px;
     cursor: pointer;
 }
-
 button:hover {
     background: #a61e65;
 }
@@ -160,7 +155,76 @@ button:hover {
 @media (min-width: 1024px) {
     .sidebar{
     flex: 1 1 calc(33.333% - 20px); }
+
+@keyframes shimmer{
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
 }
+:root{
+    /* adjust this if your sidebar is wider/narrower; default 220px */
+    --indicator-left-offset: 220px;
+    --indicator-width: 10px;
+    --indicator-height-vh: 80vh;
+    --thumb-size: 36px;
+  }
+
+  /* basic visual (same look as before) */
+  .scroll-indicator{
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: var(--indicator-width);
+    height: var(--indicator-height-vh);
+    background: rgba(94, 34, 34, 0.12);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(99,102,241,0.28);
+    z-index: 9999;
+    right: auto; /* ensure not pinned to right */
+  }
+
+  /* place on left side with offset variable; change variable if needed */
+  .scroll-indicator.left {
+    left: calc(var(--indicator-left-offset) + 12px); /* 12px padding from sidebar */
+  }
+
+  .scroll-progress{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(180deg,#c084fc,#818cf8,#c084fc);
+    border-radius: 20px;
+    transition: height .09s linear;
+  }
+
+  .scroll-thumb{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: var(--thumb-size);
+    height: var(--thumb-size);
+    border-radius: 50%;
+    background: linear-gradient(135deg,#f9fafb,#dbeafe);
+    color: #312e81;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+    box-shadow: 0 4px 15px rgba(99,102,241,0.35);
+    transition: bottom .09s linear;
+    font-size:13px;
+  }
+
+  /* hide on small screens */
+  @media (max-width: 600px){
+    .scroll-indicator{ display:none; }
+  }
+
 #colorBtn {
   background-color: #ff69b4;
   color: white;
