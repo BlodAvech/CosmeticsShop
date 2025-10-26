@@ -1,16 +1,5 @@
 $(document).ready(function () {
-  const products = [
-    "Lipstick",
-    "Cleanser foam",
-    "Palette",
-    "Lash",
-    "Toner",
-    "Serum",
-    "Moisturizer",
-    "Foundation",
-    "Blush",
-    "Mask"
-  ];
+  const products = getProductsName();
 
   const suggestionBox = $("<ul id='suggestions'></ul>").css({
     position: "absolute",

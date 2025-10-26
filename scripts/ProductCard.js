@@ -49,3 +49,9 @@ class ProductCard
 		products.push(new ProductCard("Kushon", 15, "img/kushon.png"));
 	}
 	products.forEach(product => product.render());
+
+	function getProductsName() {
+		return products
+			.map(product => product.name)
+			.filter((name , index , array) => array.indexOf(name) === index);
+	}
