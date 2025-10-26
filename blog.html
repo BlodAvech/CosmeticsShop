@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Blog - Cosmetics Shop</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -30,7 +31,7 @@
             </select>
         </div>
     </div>
-     <div class="scroll-indicator left" aria-hidden="false" id="scrollIndicator">
+    <div class="scroll-indicator left" aria-hidden="false" id="scrollIndicator">
   <div class="scroll-progress" id="scrollProgress"></div>
   <div class="scroll-thumb" id="scrollThumb">0%</div>
 </div>
@@ -59,6 +60,8 @@
     <section class="blog-section">
     <article class="blog-post">
       <div class="blog-content" >
+        <button class="copy-btn">Copy 📋</button>
+    <div class="tooltip">Copied to clipboard!</div>
         <h2 class="blog-title">Basic Skincare </h2>
         <p class="blog-text">Learn how to keep your skin glowing with natural and simple methods. From daily routines to must-have products, we share the secrets of healthy skin.</p>
         <a href="https://www.youtube.com/watch?v=j4mtybUhWic" class="btn-read"><img src="img/scinCare.png" class="blog-img" ></a>
@@ -117,6 +120,7 @@
     <script src="scripts/languageSwitch.js"></script>
     <script src="scripts/keyboard.js"></script>
     <script src="scripts/animation.js"></script>
+    <script src="scripts/copy.js"></script>
 
 </body>
 </html>

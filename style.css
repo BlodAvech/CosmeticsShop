@@ -1214,14 +1214,50 @@ h3:has(mark) {
 
 
 #FindTextInput {
-  width: 220px;
-  padding: 8px;
-  border-radius: 8px;
-  border: 1px solid #aaa;
-  text-align: center;
+    width: 220px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+    text-align: center;
 }
 
 .highlight {
-  background-color: yellow;
-  font-weight: bold;
+background-color: yellow;
+font-weight: bold;
+}
+
+
+.added-to-cart-notification, .tooltip {
+    align-items: center;
+    display: none;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px;
+    border: 2px solid #75c555;
+    top: 30%;
+    width: 300px;
+    height: 130px;
+    text-align: center;
+    background-color: #c8f8ce;
+    box-shadow: 0 0 15px #55c55b;
+    z-index: 10000;
+}
+.added-to-cart-notification p{
+    margin-top: 10px;
+}
+.close-added-to-cart{
+    position: relative;
+    padding: 8px 15px;
+    width: 80px;
+    color: #e6f7e9;
+    background-color: #75c555;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+.close-added-to-cart:hover {
+    background-color: #4caf50;
 }
