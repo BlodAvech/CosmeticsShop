@@ -1227,7 +1227,7 @@ font-weight: bold;
 }
 
 
-.added-to-cart-notification, .tooltip {
+.added-to-cart-notification {
     align-items: center;
     display: none;
     position: fixed;
@@ -1243,6 +1243,27 @@ font-weight: bold;
     box-shadow: 0 0 15px #55c55b;
     z-index: 10000;
 }
+
+.tooltip{
+    display: none;
+    align-self: center;
+    position: fixed;
+    left:50%;
+    border-radius: 10px;
+    border: 2px solid #75c555;
+    top: 30%;
+    width: 180px;
+    height: 45px;
+    text-align: center;
+    background-color: #c8f8ce;
+    box-shadow: 0 0 15px #55c55b;
+    z-index: 10000;
+}
+
+.tooltip p{
+    margin-top: 8px;
+}
+
 .added-to-cart-notification p{
     margin-top: 10px;
 }

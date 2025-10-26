@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     btn.addEventListener("click", function() {
       if (isDarkPink) {
-       
+      
         document.body.style.backgroundColor = "white";
         document.body.style.color = "#000";
         btn.textContent = "Switch to Dark Pink 💗";
