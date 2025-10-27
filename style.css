@@ -1299,3 +1299,75 @@ font-weight: bold;
 .close-added-to-cart:hover {
     background-color: #4caf50;
 }
+
+
+.stats_container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.purchased_stat,
+.buyers_stat,
+.visits_stat {
+    flex: 1;
+    position: relative;
+    background: #f0f0f0;
+    border-radius: 15px;
+    padding: 30px 20px;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.progress_bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    transition: height 0s ease-out;
+    z-index: 1;
+}
+
+.purchased_stat .progress_bg {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+}
+
+.buyers_stat .progress_bg {
+    background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
+}
+
+.visits_stat .progress_bg {
+    background: linear-gradient(135deg, #ffd93d 0%, #ff9c32 100%);
+}
+
+.purchased_title,
+.buyers_title,
+.visits_title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+    position: relative;
+    z-index: 2;
+}
+
+.purchased_count,
+.buyers_count,
+.visits_count {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+    position: relative;
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .stats_container {
+        flex-direction: column;
+    }
+}

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cosmetics Shop</title>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -55,6 +55,23 @@
         <p class="header_subtitle" data-lang-key="subtitle">Best beauty products for your style 🌸</p>
     </div>
         <div class="main">
+            <div class="stats_container">
+                <div class="purchased_stat">
+                    <div class="progress_bg"></div>
+                    <div class="purchased_title">Total Purchases</div>
+                    <div class="purchased_count">0</div>
+                </div>
+                <div class="buyers_stat">
+                    <div class="progress_bg"></div>
+                    <div class="buyers_title">Total Buyers</div>
+                    <div class="buyers_count">0</div>
+                </div>
+                <div class="visits_stat">
+                    <div class="progress_bg"></div>
+                    <div class="visits_title">Total Visits</div>
+                    <div class="visits_count">0</div>
+                </div>
+            </div>
         <div class="featured">
             <div class="featured_title">Featured Products</div>
             <div class="featured_panel">
@@ -122,6 +139,7 @@
     <script src="scripts/popup.js" charset="UTF-8"></script>
     <script src="scripts/keyboard.js"></script>
     <script src="scripts/languageSwitch.js"></script>
+    <script src="scripts/count.js"></script>
 </body>
 </html>
 

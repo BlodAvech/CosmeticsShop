@@ -1,4 +1,3 @@
-// Subscribe popup
 let form = null;
 
 document.querySelector("#openpopup").onclick=function(){
