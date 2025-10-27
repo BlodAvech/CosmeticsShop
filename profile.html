@@ -9,36 +9,15 @@
 
 <body>
     <div class="sidebar">
-        <h3 data-lang-key="categories">Categories</h3>
-        <ul>
-            <li><a href="#" data-lang-key="makeup">Makeup</a></li>
-            <li><a href="#" data-lang-key="skincare">Skincare</a></li>
-            <li><a href="#" data-lang-key="haircare">Haircare</a></li>
-            <li><a href="#" data-lang-key="fragrance">Fragrance</a></li>
-            <li><a href="#" data-lang-key="tools">Tools & Brushes</a></li>
-        </ul>
 
         <h3><a href="profile.html" data-lang-key="myProfile">My Profile</a></h3>
         <h3><a href="contact.html" data-lang-key="contactLink">Contact</a></h3>
         <h3><a href="blog.html" data-lang-key="blogLink">Blog</a></h3>
-
-        <div class="language-box">
-            <h3 data-lang-key="language">Language</h3>
-            <select id="langSelect" class="lang-select">
-                <option value="en">English</option>
-                <option value="ru">Русский</option>
-                <option value="kz">Қазақша</option>
-            </select>
         </div>
     </div>
-     <div class="scroll-indicator left" aria-hidden="false" id="scrollIndicator">
-  <div class="scroll-progress" id="scrollProgress"></div>
-  <div class="scroll-thumb" id="scrollThumb">0%</div>
-</div>
 
     <nav class="nav">
         <div id="logo"><img src="img/logo.png"></div>
-        <audio controls><source src="audio/music.mp3">play music</audio>
         <a class="nav_buttons" href="index.html" data-lang-key="home">Home</a>
         <a class="nav_buttons" href="products.html" data-lang-key="products">Products</a>
         <a class="nav_buttons" href="blog.html" data-lang-key="blog">Blog</a>
@@ -47,7 +26,6 @@
         <a class="nav_buttons" href="contact.html" data-lang-key="contact">Contact</a>
         <a class="nav_buttons" href="sale.html" data-lang-key="sale">Sale</a>
         <a class="nav_buttons" href="profile.html" data-lang-key="profile">Profile</a>
-        <button id="colorBtn" class="nav_buttons" data-lang-key="colorBtn">Change Color</button>
     </nav>
 
     <div class="main" id = "main_profile">
@@ -63,61 +41,10 @@
                     <div class="profile_name">Piriyev Erkhan</div>
                     <div class="profile_email">erkhanpiriyev@gmail.com</div>
                 </div>
-                <button class="open_registration_btn">Register now</button>
             </div>
         </div>
     </div>
-
-    <div class="registration">
-        <div class="registration_header">
-            <h2>Registration</h2>
-        </div>
-        <form class="registration_form">
-            <div class="form_group">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" placeholder="Enter your full name">
-            </div>
-            <div class="form_group">
-                <label for="email">Email</label>
-                <input type="email" id="email" placeholder="Enter your email">
-            </div>
-            <div class="form_group">
-                <label for="password">Password</label>
-                <input type="password" id="password" placeholder="Create a password">
-            </div>
-            <div class="form_group">
-                <label for="confirm_password">Confirm Password</label>
-                <input type="password" id="confirm_password" placeholder="Confirm your password">
-            </div>
-            <button type="submit" class="close_registration_btn">Register now</button>
-        </form>
-    </div>
-    <div class="footer">
-
-        <div class="registration">
-            <div class="registration_header">
-                <h2>Registration</h2>
-            </div>
-            <form class="registration_form">
-                <div class="form_group">
-                    <label for="name">Full Name</label>
-                    <input type="text" name="" placeholder="Enter your full name">
-                </div>
-                <div class="form_group">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" placeholder="Enter your email">
-                </div>
-                <div class="form_group">
-                    <label for="password">Password</label>
-                    <input type="password" name="password" placeholder="Create a password">
-                </div>
-                <div class="form_group">
-                    <label for="confirm_password">Confirm Password</label>
-                    <input type="password" name="confirm_password" placeholder="Confirm your password">
-                </div>
-                <button type="submit" class="register_btn">Register Now</button>
-            </form>
-        </section>
+    
     </main>
 
     <footer class="footer text-center py-3 mt-5" role="contentinfo">
@@ -125,11 +52,8 @@
             Team: AmandaLindaRose | Members: Shahnaz.K | Kyrmyzy.Z | Saltanat.B | Erkhan.P
         </div>
     </div>
-    <script src="scripts/procent.js"></script>
     <script src = "scripts/script.js"></script>
     <script src="scripts/register.js" charset="UTF-8"></script>
-    <script src="scripts/color.js"></script>
-    <script src="scripts/languageSwitch.js"></script>
     <script src="scripts/keyboard.js"></script>
 
 </body>

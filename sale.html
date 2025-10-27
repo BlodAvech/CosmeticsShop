@@ -8,36 +8,15 @@
 </head> 
 <body>
     <div class="sidebar">
-        <h3 data-lang-key="categories">Categories</h3>
-        <ul>
-            <li><a href="#" data-lang-key="makeup">Makeup</a></li>
-            <li><a href="#" data-lang-key="skincare">Skincare</a></li>
-            <li><a href="#" data-lang-key="haircare">Haircare</a></li>
-            <li><a href="#" data-lang-key="fragrance">Fragrance</a></li>
-            <li><a href="#" data-lang-key="tools">Tools & Brushes</a></li>
-        </ul>
 
         <h3><a href="profile.html" data-lang-key="myProfile">My Profile</a></h3>
         <h3><a href="contact.html" data-lang-key="contactLink">Contact</a></h3>
         <h3><a href="blog.html" data-lang-key="blogLink">Blog</a></h3>
 
-        <div class="language-box">
-            <h3 data-lang-key="language">Language</h3>
-            <select id="langSelect" class="lang-select">
-                <option value="en">English</option>
-                <option value="ru">Русский</option>
-                <option value="kz">Қазақша</option>
-            </select>
-        </div>
     </div>
-     <div class="scroll-indicator left" aria-hidden="false" id="scrollIndicator">
-  <div class="scroll-progress" id="scrollProgress"></div>
-  <div class="scroll-thumb" id="scrollThumb">0%</div>
-</div>
 
     <nav class="nav">
         <div id="logo"><img src="img/logo.png"></div>
-        <audio controls><source src="audio/music.mp3">play music</audio>
         <a class="nav_buttons" href="index.html" data-lang-key="home">Home</a>
         <a class="nav_buttons" href="products.html" data-lang-key="products">Products</a>
         <a class="nav_buttons" href="blog.html" data-lang-key="blog">Blog</a>
@@ -47,7 +26,6 @@
         <a class="nav_buttons" href="sale.html" data-lang-key="sale">Sale</a>
         <a class="nav_buttons" href="profile.html" data-lang-key="profile">Profile</a>
         <button id="themeToggle" class="nav_buttons">Night Mode</button>
-        <button id="colorBtn" class="nav_buttons" data-lang-key="colorBtn">Change Color</button>
     </nav>
 
     <div class="main">
@@ -74,29 +52,6 @@
                 </div>
             </div>
 
-            <div class="style-demo">
-                <h3>Style Sale Cards</h3>
-                <div class="style-controls">
-                    <button class="style-btn" data-theme="pink-theme">Pink Style</button>
-                    <button class="style-btn" data-theme="blue-theme">Blue Style</button>
-                    <button class="style-btn" data-theme="green-theme">Green Style</button>
-                    <button class="style-btn" data-theme="purple-theme">Purple Style</button>
-                    <button class="style-btn" data-theme="original-theme">Default Style</button>
-                </div>
-            </div>
-
-            <div class="content-demo">
-                <h3>Update Sale Info</h3>
-                <div class="content-controls">
-                    <button class="content-btn" id="saleInfoBtn">Show Sale Info</button>
-                    <button class="content-btn" id="discountsBtn">View Discounts</button>
-                    <button class="content-btn" id="featuresBtn">Product Features</button>
-                    <button class="content-btn" id="resetContentBtn">Reset Info</button>
-                </div>
-                <div class="dynamic-content" id="dynamicContent">
-                    Welcome to our exclusive sale section! Click buttons to see different sale information.
-                </div>
-            </div>
             <div id="dateContainer">
                 <button id="showTimeBtn">Show Current Time</button>
                 <div id="datetime"></div>
@@ -104,20 +59,15 @@
         </section>
 
         <section class="sale-section" id="saleCards">
-
-
         </section>
-
+        </div>
     <footer class="footer">
         <div class="team_info">
             Team: AmandaLindaRose | Members: Shahnaz.K | Kyrmyzy.Z | Saltanat.B | Erkhan.P
         </div>
     </footer>
-    <script src="scripts/procent.js"></script>
-    <script src="scripts/task1-6assignment.js"> </script>
+    <script src="scripts/task1-5assignment.js"> </script>
     <script src="scripts/datetime.js"></script>
-    <script src="scripts/color.js"></script>
-    <script src="scripts/languageSwitch.js"></script>
     <script src="scripts/keyboard.js"></script>
     <script src="scripts/SaleCard.js"></script>
 </body>

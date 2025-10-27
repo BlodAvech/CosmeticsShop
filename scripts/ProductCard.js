@@ -44,9 +44,9 @@ class ProductCard
 		new ProductCard("Toner pade", 45 , "https://cdn.100sp.ru/pictures/1806515434"),
 	]
 
-	for(let i = 0 ; i < 14; i++)
+	for(let i = 0 ; i < 1; i++)
 	{
-		products.push(new ProductCard("Kushon", 15, "img/kushon.png"));
+		products.push(new ProductCard("Kushon", 1, "img/kushon.png"));
 	}
 	products.forEach(product => product.render());
 
