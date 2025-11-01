@@ -1231,11 +1231,14 @@ body.dark-theme .sale-card {
 }
 
 /* ---------- Заголовки и текст ---------- */
-h1, h2, h3, h4, p{
+h1, h2, h3, h4, h5, h6, p{
   color: #db5f9d;
   transition: color 0.3s;
 }
-
+.profile_email,.profile_name{
+    color: #4c2036;
+  transition: color 0.3s;
+}
 p {
   line-height: 1.6;
 }
