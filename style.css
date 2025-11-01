@@ -1148,21 +1148,21 @@ font-weight: bold;
     left: 0;
     width: 100%;
     height: 0%;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #e7ad7e 0%, #3d5987 100%);
     transition: height 0s ease-out;
     z-index: 1;
 }
 
 .purchased_stat .progress_bg {
-    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+    background: linear-gradient(135deg, #e47bb3 0%, #58354c 100%);
 }
 
 .buyers_stat .progress_bg {
-    background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
+    background: linear-gradient(135deg, #e480da 0%, #bf7da2 100%);
 }
 
 .visits_stat .progress_bg {
-    background: linear-gradient(135deg, #ffd93d 0%, #ff9c32 100%);
+    background: linear-gradient(135deg, #5d3654 0%, #ff9bf5 100%);
 }
 
 .purchased_title,
@@ -1190,4 +1190,56 @@ font-weight: bold;
     .stats_container {
         flex-direction: column;
     }
+}
+.rating-section{
+border: 2px solid #db5f9d; 
+  padding: 15px;             
+  border-radius: 10px;  
+}
+
+/* 🌙 Тёмная тема */
+body.dark-theme {
+  background-color: #1c1c1e;
+  color: #f5f5f5;
+}
+
+
+body.dark-theme nav {
+  background-color: #2a2a2d;
+}
+
+/* ---------- Карточки ---------- */
+.card, .sale-card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: background-color 0.3s, box-shadow 0.3s;
+  padding: 15px;
+  text-align: center;
+}
+
+.card img, .sale-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+body.dark-theme .card,
+body.dark-theme .sale-card {
+  background-color: #2c2c2f;
+  box-shadow: 0 0 10px rgba(255,255,255,0.05);
+}
+
+/* ---------- Заголовки и текст ---------- */
+h1, h2, h3, h4, p{
+  color: #db5f9d;
+  transition: color 0.3s;
+}
+
+p {
+  line-height: 1.6;
+}
+
+body.dark-theme .action-btn {
+  background-color: #e75a8d;
 }
