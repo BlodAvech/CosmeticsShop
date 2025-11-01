@@ -143,9 +143,14 @@ button:hover {
 }
 
 @media (max-width: 599px) {
+    .sidebar {
+    flex: 1 1 calc(50% - 20px); }
     .featured_panel {
     grid-template-columns: 1fr; }
-}
+    .main{
+    grid-template-columns: 1fr; }
+    }
+
 
 @media (min-width: 600px) {
     .sidebar {
