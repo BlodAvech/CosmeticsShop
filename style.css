@@ -149,7 +149,11 @@ button:hover {
     grid-template-columns: 1fr; }
     .main{
     grid-template-columns: 1fr; }
+    .header{
+    flex-direction: column;
+    gap: 5px;}
     }
+
 
 
 @media (min-width: 600px) {
