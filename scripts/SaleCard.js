@@ -30,7 +30,7 @@ class SaleCard
 
 //	new SaleCard("" , 0 , 0 , "");
 
-cardItems = [
+const cardItems = [
 	new SaleCard("Lipstick" , 15 , 25 , "https://avatars.mds.yandex.net/i?id=d6c39f2e3e09bfe1337aeff5f23ff0f96b73d875-4507655-images-thumbs&n=13"),
 	new SaleCard("Cushion" , 18 , 30 , "https://avatars.mds.yandex.net/i?id=a7a13ffed538684e847072ab6db1863585461106-5222233-images-thumbs&n=13"),
 	new SaleCard("Palette" , 16 , 28 , "https://resources.cdn-kaspi.kz/img/m/p/h4a/h3f/80681068527646.jpg?format=gallery-large"),

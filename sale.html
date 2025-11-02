@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sale</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head> 
 <body>
     <div class="sidebar">
@@ -44,16 +45,28 @@
         </section>
 
         <section class="sale-section" id="saleCards">
+             <div class="added-to-favorites-notification">
+      <p>✅ Added to favorites! </p>
+      <button class="close-added-to-favorites">Close</button>
+    </div> 
+
+    <div class="added-to-cart-notification">
+      <p>✅ Successfully added to the cart! Don't forget about the sale!</p>
+      <button class="close-added-to-cart">Close</button>
+    </div>
+        
         </section>
-        </div>
+        
+    </div>
     <footer class="footer">
         <div class="team_info">
             Team: AmandaLindaRose | Members: Shahnaz.K | Kyrmyzy.Z | Saltanat.B | Erkhan.P
         </div>
     </footer>
-    <script src="scripts/task1-5assignment.js"> </script>
+    <script src="scripts/task1-5assignment.js"></script>
     <script src="scripts/datetime.js"></script>
     <script src="scripts/keyboard.js"></script>
     <script src="scripts/SaleCard.js"></script>
+    <script src="scripts/toast.js"></script>
 </body>
 </html>

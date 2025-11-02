@@ -1071,8 +1071,8 @@ background-color: yellow;
 font-weight: bold;
 }
 
-
-.added-to-cart-notification {
+/* TOAST Notifications */
+.added-to-cart-notification, .added-to-favorites-notification, .remove-notification{
     align-items: center;
     display: none;
     position: fixed;
@@ -1088,6 +1088,36 @@ font-weight: bold;
     box-shadow: 0 0 15px #55c55b;
     z-index: 10000;
 }
+
+.added-to-cart-notification, .added-to-favorites-notification p{
+    margin-top: 10px;
+}
+
+.remove-notification p{
+    margin-top: 20px;
+    font-size: larger;
+}
+.close-added-to-cart, .close-added-to-favorites {
+    position: relative;
+    padding: 8px 15px;
+    width: 80px;
+    color: #e6f7e9;
+    background-color: #75c555;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+.close-added-to-cart :hover {
+    background-color: #4caf50;
+}
+
+.close-added-to-favorites :hover {
+    background-color: #4caf50;  
+}
+
+ /* TOAST */
 
 .tooltip{
     display: none;
@@ -1108,26 +1138,6 @@ font-weight: bold;
 .tooltip p{
     margin-top: 8px;
 }
-
-.added-to-cart-notification p{
-    margin-top: 10px;
-}
-.close-added-to-cart{
-    position: relative;
-    padding: 8px 15px;
-    width: 80px;
-    color: #e6f7e9;
-    background-color: #75c555;
-    border: none;
-    border-radius: 5px;
-    font-size: 12px;
-    cursor: pointer;
-    margin: 0 auto;
-}
-.close-added-to-cart:hover {
-    background-color: #4caf50;
-}
-
 
 .stats_container {
     display: flex;
