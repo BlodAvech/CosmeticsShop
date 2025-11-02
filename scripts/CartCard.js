@@ -61,7 +61,7 @@ document.addEventListener("click", function(e) {
 	if (e.target.classList.contains("cart_item_remove")) {
 		const itemElement = e.target.closest(".item");
 		const name = itemElement.querySelector("strong").textContent;
-		itemElement.hide();
+		itemElement.remove();
 		let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
 		cartItems = cartItems.filter(item => item.name !== name);
 		localStorage.setItem("cartItems", JSON.stringify(cartItems));

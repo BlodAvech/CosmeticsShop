@@ -56,18 +56,42 @@ function UpdateUI()
 
 		}
 
-		if (e.target.classList.contains("cart")) {
-			const card = e.target.closest(".sale-card");
-			const name = card.querySelector("h3").textContent;
-			const price = card.querySelector("strong").textContent.replace("$", "");
-			const imgSrc = card.querySelector("img").src;
+document.addEventListener("click", function (e) {
+  if (e.target.classList.contains("like")) {
+    const card = e.target.closest(".sale-card");
+    const name = card.querySelector("h3").textContent.trim();
+    const price = card.querySelector("strong").textContent.replace("$", "").trim();
+    const imgSrc = card.querySelector("img").src;
 
-			const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-			cartItems.push({ name: name, price: price, imgSrc: imgSrc });
-			localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    const favItems = JSON.parse(localStorage.getItem("favItems")) || [];
 
-		}
+    const alreadyFav = favItems.some(item => item.name === name);
+    if (!alreadyFav) {
+      favItems.push({ name, price, imgSrc });
+      localStorage.setItem("favItems", JSON.stringify(favItems));
+    } else {
+      alert(`"${name}" is already in your Favorites.`);
+    }
+  }
+
+  if (e.target.classList.contains("cart")) {
+    const card = e.target.closest(".sale-card");
+    const name = card.querySelector("h3").textContent.trim();
+    const price = card.querySelector("strong").textContent.replace("$", "").trim();
+    const imgSrc = card.querySelector("img").src;
+
+    const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+    const alreadyInCart = cartItems.some(item => item.name === name);
+    if (!alreadyInCart) {
+      cartItems.push({ name, price, imgSrc });
+      localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    
+    } else {
+      alert(`${name}" is already in your Cart.`);
+    }
+  }
+});
 	});
+
 }
-
-
