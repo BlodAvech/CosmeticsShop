@@ -4,7 +4,7 @@ $(document).ready(function () {
   const suggestionBox = $("<ul id='suggestions'></ul>").css({
     position: "absolute",
     top: "60px",
-    left: "19%",
+    left: "36%",
     transform: "translateX(-50%)",
     background: "white",
     border: "1px solid #ccc",
