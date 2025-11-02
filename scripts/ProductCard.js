@@ -36,10 +36,15 @@ const products = [
  new ProductCard("Toner pade", 45 , "https://cdn.100sp.ru/pictures/1806515434"), 
 ]
 
-products.forEach(product => product.render());
+
+	function getProductsName() {
+		return products
+			.map(product => product.name)
+			.filter((name , index , array) => array.indexOf(name) === index);
+	}
+
 
 document.addEventListener("click", function (e) {
-
   if (e.target.classList.contains("btn-cart")) {
     const card = e.target.closest(".product-card");
     const name = card.querySelector(".product-name").textContent.trim();
