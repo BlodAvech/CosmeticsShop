@@ -43,6 +43,31 @@ if (window.location.pathname.includes("sale.html")) UpdateUI();
 function UpdateUI()
 {
 	cardItems.forEach(item => item.render());
+	document.addEventListener("click", function (e) {
+		if (e.target.classList.contains("like")) {
+			const card = e.target.closest(".sale-card");
+			const name = card.querySelector("h3").textContent;
+			const price = card.querySelector("strong").textContent.replace("$", "");
+			const imgSrc = card.querySelector("img").src;
+
+			const favItems = JSON.parse(localStorage.getItem("favItems")) || [];
+			favItems.push({ name: name, price: price, imgSrc: imgSrc });
+			localStorage.setItem("favItems", JSON.stringify(favItems));
+
+		}
+
+		if (e.target.classList.contains("cart")) {
+			const card = e.target.closest(".sale-card");
+			const name = card.querySelector("h3").textContent;
+			const price = card.querySelector("strong").textContent.replace("$", "");
+			const imgSrc = card.querySelector("img").src;
+
+			const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+			cartItems.push({ name: name, price: price, imgSrc: imgSrc });
+			localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+		}
+	});
 }
 
 

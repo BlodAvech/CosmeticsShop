@@ -28,7 +28,6 @@ class CartCard
 	}
 }
 
-//	new CartCard("", 0, ""),
 
 cartItems = [
 	new CartCard("Amuse lipstick", 20, "https://m.media-amazon.com/images/I/31POGD-KlsL._AC_.jpg" , 1),
@@ -46,6 +45,28 @@ if (window.location.pathname.includes("cart.html")) UpdateUI();
 function UpdateUI()
 {
 	cartItems.forEach(cartItem => cartItem.render());
+
+	document.querySelectorAll(".cart_item_remove").forEach(button => {
+		button.addEventListener("click", function() {
+			this.closest(".item").remove();
+		});
+	});
+
+	const savedItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+	savedItems.forEach(item => {
+    const card = new CartCard(item.name, item.price, item.imgSrc);
+    card.render();
+});
+document.addEventListener("click", function(e) {
+	if (e.target.classList.contains("cart_item_remove")) {
+		const itemElement = e.target.closest(".item");
+		const name = itemElement.querySelector("strong").textContent;
+		itemElement.hide();
+		let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+		cartItems = cartItems.filter(item => item.name !== name);
+		localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    }
+  });
 }
 
 SetInteractives();

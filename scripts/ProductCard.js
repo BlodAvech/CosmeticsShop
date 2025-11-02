@@ -23,7 +23,6 @@ class ProductCard
 		this.containerSelector.insertAdjacentHTML("beforeend", template);
 	}
 }
-
 //	new ProductCard("", 0, ""),
 
 	const products = [
@@ -55,3 +54,24 @@ class ProductCard
 			.map(product => product.name)
 			.filter((name , index , array) => array.indexOf(name) === index);
 	}
+
+	if (window.location.pathname.includes("cart.html")) {
+	const savedItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+	savedItems.forEach(item => {
+		const card = new CartCard(item.name, item.price, item.imgSrc);
+		card.render();
+	});
+
+	document.addEventListener("click", function (e) {
+		if (e.target.classList.contains("cart_item_remove")) {
+			const itemElement = e.target.closest(".item");
+			const name = itemElement.querySelector("strong").textContent;
+			itemElement.hide();
+
+			let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+			cartItems = cartItems.filter(item => item.name !== name);
+			localStorage.setItem("cartItems", JSON.stringify(cartItems));
+		}
+	});
+}
