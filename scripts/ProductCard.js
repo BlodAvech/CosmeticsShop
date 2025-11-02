@@ -42,6 +42,7 @@ const products = [
 			.map(product => product.name)
 			.filter((name , index , array) => array.indexOf(name) === index);
 	}
+	products.forEach(product => product.render());
 
 
 document.addEventListener("click", function (e) {
