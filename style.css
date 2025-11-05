@@ -171,13 +171,20 @@ body.dark-theme .footer {
         grid-template-areas:
             "head1"
             "head2"
+            "side"
             "content"
             "foot";
     }
     
+    
+    .stats_container
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
     .sidebar {
         min-height: auto;
-        grid-area: content;
     }
     
     .header {
@@ -886,3 +893,4 @@ body.dark-theme .footer {
 .next {
     right: 10px;
 }
+
