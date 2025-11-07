@@ -1,84 +1,50 @@
-const form = document.querySelector('.contact-form'); 
+document.addEventListener('DOMContentLoaded', function() {
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
+  var forms = document.querySelectorAll('form');
+  var namePattern = /^[A-Za-z\s]+$/; 
+  var emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/; 
 
-    const nameInput = document.getElementById('name');
-    const emailInput = document.getElementById('email');
-    const messageInput = document.getElementById('message');
+  for (var i = 0; i < forms.length; i++) {
+    (function(form) {
+      form.addEventListener('submit', function(event) {
+        event.preventDefault(); 
 
-    const submitButton = form.querySelector('button[type="submit"]');
-    const submitButtonDefaultText = submitButton.textContent;
-    submitButton.textContent = 'Отправка...';
-    submitButton.disabled = true;
+        let nameInput = form.querySelector('#name');
+        let emailInput = form.querySelector('#email');
+        let messageInput = form.querySelector('#message');
 
-    fetch('https://jsonplaceholder.typicode.com/posts', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            title: 'Contact Form', 
-            body: `Имя: ${nameInput.value}, Email: ${emailInput.value}, Сообщение: ${messageInput.value}`,
-            userId: 1
-        })
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Server error: ' + response.status);
+        let name = nameInput ? nameInput.value.trim() : '';
+        let email = emailInput ? emailInput.value.trim() : '';
+        let message = messageInput ? messageInput.value.trim() : '';
+        
+        let errors = [];
+
+        if (!name) {
+          errors.push('Name is required.');
+        } else if (!namePattern.test(name)) {
+          errors.push('Name must contain only letters and spaces.');
         }
-        return response.json();
+
+        if (!email) {
+          errors.push('Email is required.');
+        } 
+        else if (!emailPattern.test(email)) {
+          errors.push('Email format is incorrect.');
+        }
+
+        if (!message) {
+          errors.push('Message cannot be empty.');
+        }
+
+        if (errors.length > 0) {
+          alert('Please fix the following:\n' + errors.join('\n'));
+        } else {
+          alert('✅ Message sent successfully!');
+          form.reset(); 
+        }
+      });
     })
-    .then(data => {
-        console.log('Success:', data);
-        showMessage('Message sent successfully!', 'success');
-        form.reset(); 
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        showMessage('There was an error sending: ' + error.message, 'error');
-    })
-    .finally(() => {
-        submitButton.textContent = submitButtonDefaultText;
-        submitButton.disabled = false;
-    });
+    (forms[i]);
+  }
 });
 
-function showMessage(text, type) {
-    const existingMessage = document.querySelector('.form-message');
-    if (existingMessage) {
-        existingMessage.remove();
-    }
-
-    const messageDiv = document.createElement('div');
-    messageDiv.className = 'form-message';
-    messageDiv.textContent = text;
-    
-    if (type === 'success') {
-        messageDiv.style.cssText = `
-            background: #d4edda;
-            color: #155724;
-            padding: 12px;
-            margin: 15px 0;
-            border-radius: 4px;
-            border: 1px solid #c3e6cb;
-        `;
-    } else {
-        messageDiv.style.cssText = `
-            background: #f8d7da;
-            color: #721c24;
-            padding: 12px;
-            margin: 15px 0;
-            border-radius: 4px;
-            border: 1px solid #f5c6cb;
-        `;
-    }
-
-    form.parentNode.insertBefore(messageDiv, form);
-
-    setTimeout(() => {
-        if (messageDiv.parentNode) {
-            messageDiv.remove();
-        }
-    }, 5000);
-}

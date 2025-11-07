@@ -657,6 +657,15 @@ body.dark-theme .footer {
     background: #a02060;
 }
 
+.contact-btn{
+    background: #db5f9d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 8px 0;
+}
+
 /* Sale Page Specific Styles */
 
 .sale-section {
