@@ -614,7 +614,7 @@ body.dark-theme .footer {
 
 /* Contact Page Specific Styles */
 
-.contact-section {
+.contact-section, .contact-info {
     max-width: 60%;
     margin: 40px auto;
     padding: 20px;
@@ -648,15 +648,6 @@ body.dark-theme .footer {
     font-size: 14px;
 }
 
-.contact-form button {
-    margin-top: 15px;
-    padding: 10px;
-}
-
-.contact-form button:hover {
-    background: #a02060;
-}
-
 .contact-btn{
     background: #db5f9d;
     color: white;
@@ -665,6 +656,41 @@ body.dark-theme .footer {
     cursor: pointer;
     margin: 8px 0;
 }
+
+.contact-info h5, .contact-info p {
+    margin-bottom: 20px;
+    font-weight: 360;
+}
+
+.contact-info h5 {
+    text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.social-icons a {
+  display: inline-block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icons img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.15);
+  box-shadow: 0 6px 15px rgba(254, 115, 185, 0.6);
+}
+
 
 /* Sale Page Specific Styles */
 
