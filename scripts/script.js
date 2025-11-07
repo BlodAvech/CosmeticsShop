@@ -16,7 +16,7 @@ forms.forEach(form => {
 
 		let formHasError = false;
 
-		//Name Input Check
+		
 		if(nameInput != null)
 		{
 			if(!namePattern.test(nameInput.value))
@@ -26,7 +26,7 @@ forms.forEach(form => {
 			}
 		}
 
-		//Email Input Check
+	
 		if(emailInput != null)
 		{
 			if(!emailPattern.test(emailInput.value))
@@ -36,7 +36,7 @@ forms.forEach(form => {
 			}
 		}
 		
-		//Password Input Check
+	
 		if(passwordInput != null)
 		{
 			if(passwordInput.value.length < passwordMinLenth)
@@ -46,7 +46,7 @@ forms.forEach(form => {
 			}
 		}
 
-		//ConfirmPassword Input Check
+	
 		if(confirmPasswordInput != null)
 		{
 			if(passwordInput.value != confirmPasswordInput.value)

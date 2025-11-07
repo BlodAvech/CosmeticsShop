@@ -27,11 +27,8 @@ class SaleCard
 		this.containerSelector.insertAdjacentHTML("beforeend", template);
 	}
 }
-
-//	new SaleCard("" , 0 , 0 , "");
-
 const cardItems = [
-	new SaleCard("Lipstick" , 15 , 25 , "https://avatars.mds.yandex.net/i?id=d6c39f2e3e09bfe1337aeff5f23ff0f96b73d875-4507655-images-thumbs&n=13"),
+  new SaleCard("Lipstick" , 15 , 25 , "https://avatars.mds.yandex.net/i?id=d6c39f2e3e09bfe1337aeff5f23ff0f96b73d875-4507655-images-thumbs&n=13"),
 	new SaleCard("Cushion" , 18 , 30 , "https://avatars.mds.yandex.net/i?id=a7a13ffed538684e847072ab6db1863585461106-5222233-images-thumbs&n=13"),
 	new SaleCard("Palette" , 16 , 28 , "https://resources.cdn-kaspi.kz/img/m/p/h4a/h3f/80681068527646.jpg?format=gallery-large"),
 	new SaleCard("Cushion" , 13 , 22 , "https://img.joomcdn.net/346f56c7c04878d38511f669604747bb541b71bb_original.jpeg"),
@@ -42,7 +39,7 @@ if (window.location.pathname.includes("sale.html")) UpdateUI();
 
 function UpdateUI()
 {
-	cardItems.forEach(item => item.render());
+  cardItems.forEach(item => item.render());
 	document.addEventListener("click", function (e) {
 		if (e.target.classList.contains("like")) {
 			const card = e.target.closest(".sale-card");
@@ -55,43 +52,40 @@ function UpdateUI()
 			localStorage.setItem("favItems", JSON.stringify(favItems));
 
 		}
+    document.addEventListener("click", function (e) {
+      if (e.target.classList.contains("like")) {
+        const card = e.target.closest(".sale-card");
+        const name = card.querySelector("h3").textContent.trim();
+        const price = card.querySelector("strong").textContent.replace("$", "").trim();
+        const imgSrc = card.querySelector("img").src;
 
-document.addEventListener("click", function (e) {
-  if (e.target.classList.contains("like")) {
-    const card = e.target.closest(".sale-card");
-    const name = card.querySelector("h3").textContent.trim();
-    const price = card.querySelector("strong").textContent.replace("$", "").trim();
-    const imgSrc = card.querySelector("img").src;
+        const favItems = JSON.parse(localStorage.getItem("favItems")) || [];
 
-    const favItems = JSON.parse(localStorage.getItem("favItems")) || [];
+        const alreadyFav = favItems.some(item => item.name === name);
+        if (!alreadyFav) {
+          favItems.push({ name, price, imgSrc });
+          localStorage.setItem("favItems", JSON.stringify(favItems));
+        } 
+        else {
+          alert(`"${name}" is already in your Favorites.`);
+        }
+      }
+      if (e.target.classList.contains("cart")) {
+        const card = e.target.closest(".sale-card");
+        const name = card.querySelector("h3").textContent.trim();
+        const price = card.querySelector("strong").textContent.replace("$", "").trim();
+        const imgSrc = card.querySelector("img").src;
 
-    const alreadyFav = favItems.some(item => item.name === name);
-    if (!alreadyFav) {
-      favItems.push({ name, price, imgSrc });
-      localStorage.setItem("favItems", JSON.stringify(favItems));
-    } else {
-      alert(`"${name}" is already in your Favorites.`);
-    }
+        const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+        const alreadyInCart = cartItems.some(item => item.name === name);
+        if (!alreadyInCart) {
+          cartItems.push({ name, price, imgSrc });
+          localStorage.setItem("cartItems", JSON.stringify(cartItems));
+        } 
+        else {
+            alert(`${name}" is already in your Cart.`);
+          }
+        }
+      });
+    });
   }
-
-  if (e.target.classList.contains("cart")) {
-    const card = e.target.closest(".sale-card");
-    const name = card.querySelector("h3").textContent.trim();
-    const price = card.querySelector("strong").textContent.replace("$", "").trim();
-    const imgSrc = card.querySelector("img").src;
-
-    const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-
-    const alreadyInCart = cartItems.some(item => item.name === name);
-    if (!alreadyInCart) {
-      cartItems.push({ name, price, imgSrc });
-      localStorage.setItem("cartItems", JSON.stringify(cartItems));
-    
-    } else {
-      alert(`${name}" is already in your Cart.`);
-    }
-  }
-});
-	});
-
-}

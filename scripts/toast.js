@@ -18,6 +18,7 @@ $(document).ready(function() {
     });
 
     //sale
+
      $(".cart").on("click", function() {
         $(".added-to-cart-notification").fadeIn();
     });

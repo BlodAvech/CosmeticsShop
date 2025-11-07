@@ -709,10 +709,18 @@ body.dark-theme .footer {
     background: #db5f9d;
     color: white;
     border: none;
-    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    margin: 10px 0;
+    margin: 8px 0;
+}
+
+.like, .cart, #showTimeBtn {
+    background: #db5f9d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 3px 0;
 }
 
 /* Home Page Specific Styles */
@@ -882,3 +890,5 @@ body.dark-theme .footer {
 .next {
     right: 10px;
 }
+
+

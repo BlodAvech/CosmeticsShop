@@ -1,17 +1,29 @@
-let saleEndDate = localStorage.getItem("saleEndDate");
-if (!saleEndDate) {
-  const newDate = new Date();
-  newDate.setDate(newDate.getDate() + 7);
-  saleEndDate = newDate.getTime();
-  localStorage.setItem("saleEndDate", saleEndDate);
-}
+$("#showTimeBtn").click(function() {
+  const $datetime = $("#datetime");
 
-function showCurrentTime() {
+  if ($datetime.is(":visible")) {
+    $datetime.hide();
+    return;
+  }
+
   const now = new Date();
-  const formattedTime = now.toLocaleTimeString(); 
-  document.getElementById("datetime").textContent = "🕒 Current Time: " + formattedTime;
-}
-const timeButton = document.getElementById("showTimeBtn");
-timeButton.addEventListener("click", showCurrentTime);
+  const saleEnd = new Date();
+  saleEnd.setHours(23, 59, 0, 0);
+
+  const diff = saleEnd.getHours() - now.getHours();
+  if (diff <= 0) {
+    $datetime.text("Sale ended!").css("color", "gray").show();
+    return;
+  }
+
+  $datetime.text(diff + " hours left until the end of the sale!").css("color", "red").show();
+});
+
+
+
+
+
+
+
 
 
