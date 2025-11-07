@@ -44,15 +44,15 @@
         </section>
 
         <section class="cart-summary">
-            <h2>Order Summary</h2>
-            <p>Total: <span id = "cart_totalprice">92</span>$<strong></strong></p>
+    <h2>Order Summary</h2>
+    <p>Total: <span id="cart_totalprice">92</span>$</p>
 
-            <form class = "form">
-                <label for="email">Enter your email:</label><br>
-                <input id="email" name="email" placeholder="example@mail.com"><br><br>
-                <button type="submit" class="checkout">Go to payment</button>
-            </form>
-        </section>
+    <form class="form" id="checkoutForm">
+        <label for="email">Enter your email:</label><br>
+        <input id="email" name="email" type="email" placeholder="example@mail.com" required><br><br>
+        <button type="submit" class="checkout">Go to payment</button>
+    </form>
+</section>
     </main>
 
     <footer class="footer">
@@ -66,5 +66,6 @@
     <script src="scripts/keyboard.js"></script>
     <script src="scripts/CartCard.js"></script>
     <script src="scripts/toast.js"></script>
+    <script src="scripts/formcart.js"></script>
 </body>
 </html>
