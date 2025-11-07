@@ -613,14 +613,25 @@ body.dark-theme .footer {
 }
 
 /* Contact Page Specific Styles */
+.contact-container {
+  max-width: 70%;
+  margin: 40px auto;
+  padding: 40px;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
 
-.contact-section, .contact-info {
-    max-width: 60%;
-    margin: 40px auto;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px #aaa;
-    background: white;
+.contact-section, 
+.contact-info, 
+.faq-section {
+  background: #fff;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
 .contact-section h2 {
@@ -667,23 +678,23 @@ body.dark-theme .footer {
 }
 
 .social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
 }
 
 .social-icons a {
-  display: inline-block;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .social-icons img {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
 }
 
 .social-icons a:hover img {
@@ -691,6 +702,49 @@ body.dark-theme .footer {
   box-shadow: 0 6px 15px rgba(254, 115, 185, 0.6);
 }
 
+.faq-section h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #db5f9d;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+}
+
+.faq-question {
+    width: 100%;
+    background-color: #f8c8dc;
+    color: #000;
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #db5f9d;
+    color: white;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    background: #fff;
+    padding: 0 10px;
+}
+
+.faq-answer p {
+    margin: 10px 0;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 100px;
+}
 
 /* Sale Page Specific Styles */
 
