@@ -29,9 +29,15 @@ class SaleCard
 }
 const cardItems = [
   new SaleCard("Lipstick" , 15 , 25 , "https://avatars.mds.yandex.net/i?id=d6c39f2e3e09bfe1337aeff5f23ff0f96b73d875-4507655-images-thumbs&n=13"),
-	new SaleCard("Cushion" , 18 , 30 , "https://avatars.mds.yandex.net/i?id=a7a13ffed538684e847072ab6db1863585461106-5222233-images-thumbs&n=13"),
+	new SaleCard("Makeup Fixator" , 18 , 30 , "https://images.faberlic.com/imo/transform/profile=w526/images/fl/TflGoods/_pic//1001112358712_16546108283.jpg"),
 	new SaleCard("Palette" , 16 , 28 , "https://resources.cdn-kaspi.kz/img/m/p/h4a/h3f/80681068527646.jpg?format=gallery-large"),
 	new SaleCard("Cushion" , 13 , 22 , "https://img.joomcdn.net/346f56c7c04878d38511f669604747bb541b71bb_original.jpeg"),
+  new SaleCard("Mascara", 20, 35, "https://images.faberlic.com/imo/transform/profile=w3168/images/fl/TflGoods/_pic//1001244745936_16680036243.jpg"),
+  new SaleCard("Eye shadow", 19, 32, "https://images.faberlic.com/imo/transform/profile=w526/images/fl/TflGoods/_pic//1001333587932_16711899347.jpg"),
+  new SaleCard("Eyeliner", 14, 23,"https://images.faberlic.com/imo/transform/profile=w526/images/fl/TflGoods/_pic//1001450446119_16854545091.jpg"),
+  new SaleCard("Highlighter", 17, 24, "https://images.faberlic.com/imo/transform/profile=w526/images/fl/TflGoods/_pic//1001312189970_16444795091.jpg"),
+  new SaleCard("Powder", 21, 36, "https://images.faberlic.com/imo/transform/profile=w3168/images/fl/TflGoods/_pic//1001657268519_17598376401.jpg"),
+  new SaleCard("BB cream", 22, 34, "https://images.faberlic.com/imo/transform/profile=w3168/images/fl/TflGoods/_pic//1001581641965_17077471022.jpg")
 ];
 
 
