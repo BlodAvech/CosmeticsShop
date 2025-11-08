@@ -51,43 +51,39 @@ function UpdateUI_Favorites() {
   }
 
 
-  document.addEventListener("click", function (e) {
-
+ ocument.addEventListener("click", function (e) {
     if (e.target.classList.contains("add-to-cart")) {
-      const itemElement = e.target.closest(".item");
-      const name = itemElement.querySelector("strong").textContent.trim();
-      const price = itemElement.querySelector("p:nth-child(2)").textContent.replace("Price:", "").replace("$", "").trim();
-      const imgSrc = itemElement.querySelector("img").src;
+        const itemElement = e.target.closest(".item");
+        const name = itemElement.querySelector("strong").textContent.trim();
+        const price = itemElement.querySelector("p:nth-child(2)").textContent.replace("Price:", "").replace("$", "").trim();
+        const imgSrc = itemElement.querySelector("img").src;
 
-      const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-      const alreadyInCart = cartItems.some(item => item.name === name);
+        const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+        const alreadyInCart = cartItems.some(item => item.name === name);
 
-      if (!alreadyInCart) {
-        cartItems.push({ name, price, imgSrc });
-        localStorage.setItem("cartItems", JSON.stringify(cartItems));
-      } else {
-        alert(`"${name}" already in your Cart.`);
-      }
-
-      const favItems = JSON.parse(localStorage.getItem("favItems")) || [];
-      const alreadyInFav = favItems.some(item => item.name === name);
-      if (!alreadyInFav) {
-        favItems.push({ name, price, imgSrc });
-        localStorage.setItem("favItems", JSON.stringify(favItems));
-      }
+        if (!alreadyInCart) {
+            cartItems.push({ name, price, imgSrc });
+            localStorage.setItem("cartItems", JSON.stringify(cartItems));
+            $(".added-to-cart-notification").fadeIn().delay(1500).fadeOut();
+        } else {
+            alert(`"${name}" already in your Cart.`);
+        }
     }
 
     if (e.target.classList.contains("remove_fav_item")) {
-      const itemElement = e.target.closest(".item");
-      const name = itemElement.querySelector("strong").textContent.trim();
-      itemElement.remove();
+        const itemElement = e.target.closest(".item");
+        const name = itemElement.querySelector("strong").textContent.trim();
+        itemElement.remove();
 
-      let favItems = JSON.parse(localStorage.getItem("favItems")) || [];
-      favItems = favItems.filter(item => item.name !== name);
-      localStorage.setItem("favItems", JSON.stringify(favItems));
+        let favItems = JSON.parse(localStorage.getItem("favItems")) || [];
+        favItems = favItems.filter(item => item.name !== name);
+        localStorage.setItem("favItems", JSON.stringify(favItems));
+
+        $(".remove-notification").fadeIn().delay(2000).fadeOut();
     }
-  });
+});
 }
+
 
 
 

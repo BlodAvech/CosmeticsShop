@@ -57,17 +57,29 @@ function UpdateUI()
     const card = new CartCard(item.name, item.price, item.imgSrc);
     card.render();
 });
+
 document.addEventListener("click", function(e) {
 	if (e.target.classList.contains("cart_item_remove")) {
-		const itemElement = e.target.closest(".item");
-		const name = itemElement.querySelector("strong").textContent;
-		itemElement.remove();
-		let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-		cartItems = cartItems.filter(item => item.name !== name);
-		localStorage.setItem("cartItems", JSON.stringify(cartItems));
-    }
-  });
-}
+        const choice = confirm("Are you sure you want to remove this item from the cart?");
+		if (!choice) {
+            $(".remove-notification").hide();
+            return; 
+        }
+        const itemElement = e.target.closest(".item");
+        const name = itemElement.querySelector("strong").textContent;
+
+        itemElement.remove();
+
+        let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+        cartItems = cartItems.filter(item => item.name !== name);
+        localStorage.setItem("cartItems", JSON.stringify(cartItems));
+		
+		$(".remove-notification").fadeIn();
+        setTimeout(function() {
+            $(".remove-notification").fadeOut();
+        }, 2000);
+	}
+});
 
 SetInteractives();
-
+}

@@ -41,57 +41,34 @@ const cardItems = [
 ];
 
 
-if (window.location.pathname.includes("sale.html")) UpdateUI();
-
-function UpdateUI()
-{
+if (window.location.pathname.includes("sale.html")) {
   cardItems.forEach(item => item.render());
-	document.addEventListener("click", function (e) {
-		if (e.target.classList.contains("like")) {
-			const card = e.target.closest(".sale-card");
-			const name = card.querySelector("h3").textContent;
-			const price = card.querySelector("strong").textContent.replace("$", "");
-			const imgSrc = card.querySelector("img").src;
 
-			const favItems = JSON.parse(localStorage.getItem("favItems")) || [];
-			favItems.push({ name: name, price: price, imgSrc: imgSrc });
-			localStorage.setItem("favItems", JSON.stringify(favItems));
+  document.addEventListener("click", e => {
+    const btn = e.target;
+    const card = btn.closest(".sale-card");
+    if (!card) return;
 
-		}
-    document.addEventListener("click", function (e) {
-      if (e.target.classList.contains("like")) {
-        const card = e.target.closest(".sale-card");
-        const name = card.querySelector("h3").textContent.trim();
-        const price = card.querySelector("strong").textContent.replace("$", "").trim();
-        const imgSrc = card.querySelector("img").src;
+    const name = card.querySelector("h3").textContent.trim();
+    const price = card.querySelector("strong").textContent.replace("$", "").trim();
+    const imgSrc = card.querySelector("img").src;
 
-        const favItems = JSON.parse(localStorage.getItem("favItems")) || [];
+    if (btn.classList.contains("like")) {
+      let favItems = JSON.parse(localStorage.getItem("favItems")) || [];
+      if (!favItems.some(item => item.name === name)) {
+        favItems.push({ name, price, imgSrc });
+        localStorage.setItem("favItems", JSON.stringify(favItems));
+      } 
+      else alert(`${name} already in Favorites`);
+    }
 
-        const alreadyFav = favItems.some(item => item.name === name);
-        if (!alreadyFav) {
-          favItems.push({ name, price, imgSrc });
-          localStorage.setItem("favItems", JSON.stringify(favItems));
-        } 
-        else {
-          alert(`"${name}" is already in your Favorites.`);
-        }
-      }
-      if (e.target.classList.contains("cart")) {
-        const card = e.target.closest(".sale-card");
-        const name = card.querySelector("h3").textContent.trim();
-        const price = card.querySelector("strong").textContent.replace("$", "").trim();
-        const imgSrc = card.querySelector("img").src;
-
-        const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-        const alreadyInCart = cartItems.some(item => item.name === name);
-        if (!alreadyInCart) {
-          cartItems.push({ name, price, imgSrc });
-          localStorage.setItem("cartItems", JSON.stringify(cartItems));
-        } 
-        else {
-            alert(`${name}" is already in your Cart.`);
-          }
-        }
-      });
-    });
-  }
+    if (btn.classList.contains("cart")) {
+      let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+      if (!cartItems.some(item => item.name === name)) {
+        cartItems.push({ name, price, imgSrc });
+        localStorage.setItem("cartItems", JSON.stringify(cartItems));
+      } 
+      else alert(`${name} already in Cart`);
+    }
+  });
+}

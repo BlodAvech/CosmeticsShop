@@ -1,8 +1,8 @@
 $("#showTimeBtn").click(function() {
-  const $datetime = $("#datetime");
+  const datetime = $("#datetime");
 
-  if ($datetime.is(":visible")) {
-    $datetime.hide();
+  if (datetime.is(":visible")) {
+    datetime.hide();
     return;
   }
 
@@ -12,11 +12,10 @@ $("#showTimeBtn").click(function() {
 
   const diff = saleEnd.getHours() - now.getHours();
   if (diff <= 0) {
-    $datetime.text("Sale ended!").css("color", "gray").show();
+    datetime.text("Sale ended!").css("color", "gray").show();
     return;
   }
-
-  $datetime.text(diff + " hours left until the end of the sale!").css("color", "red").show();
+  datetime.text(diff + " hours left until the end of the sale!").css("color", "red").show();
 });
 
 

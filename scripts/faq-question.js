@@ -1,6 +1,14 @@
-const questions = document.querySelectorAll('.faq-question');
+let questions = document.querySelectorAll('.faq-question');
 
-for (let q of questions) {
-  q.onclick = () => q.parentElement.classList.toggle('active');
-};
+questions.forEach(function(question) {
+  question.addEventListener('click', function() {
+    let answer=question.nextElementSibling;
+    if (answer.style.display === "block") {
+      answer.style.display = "none";
+    }
+    else {
+      answer.style.display = "block";
+    }
+  });
+});
 

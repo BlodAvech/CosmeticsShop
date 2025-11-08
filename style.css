@@ -711,9 +711,8 @@ body.dark-theme .footer {
 }
 
 .faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
+    display:none;
+    margin-top: 5px;
     background: #fff;
     padding: 0 10px;
 }
@@ -722,9 +721,6 @@ body.dark-theme .footer {
     margin: 10px 0;
 }
 
-.faq-item.active .faq-answer {
-    max-height: 100px;
-}
 
 /* Sale Page Specific Styles */
 
