@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --primary-color: #db5f9d;
+    /* --primary-color: #db5f9d;
     --secondary-color: #f8c8dc;
     --dark-pink: #C55583;
-    --light-bg: #F7E6F6;
+    --light-bg: #F7E6F6; */
+    --primary-color: #9b59b6;     
+    --secondary-color: #d7bde2;   
+    --dark-pink: #7d3c98;      
+    --light-bg: #f4ecf7;         
     --text-dark: #050505;
     --border-radius: 8px;
     --transition: all 0.3s ease;
@@ -50,7 +54,7 @@ button {
 }
 
 button:hover {
-    background: #a61e65;
+    background: var(--dark-pink);
 }
 
 /* Layout Areas */
@@ -81,7 +85,7 @@ button:hover {
 /* Navigation */
 .nav_buttons {
     font-size: 20px;
-    color: #F7E6F6;
+    color: var(--light-bg);
     cursor: pointer;
     transition: var(--transition);
     text-decoration: none;
@@ -207,7 +211,7 @@ body.dark-theme .footer {
 
 /* Price Filter */
 .price-buttons {
-    background: linear-gradient(135deg, #f8c8dc, #f885ad);
+    background: linear-gradient(135deg, var(--light-bg), var(--primary-color));
     border-radius: 10px;
     padding: 10px;
     text-align: center;
@@ -782,7 +786,7 @@ body.dark-theme .footer {
 }
 
 .read-more-btn {
-    background: #db5f9d;
+    background: var(--primary-color);
     color: white;
     border: none;
     border-radius: 5px;
@@ -791,7 +795,7 @@ body.dark-theme .footer {
 }
 
 .like, .cart, #showTimeBtn {
-    background: #db5f9d;
+    background: var(--primary-color);
     color: white;
     border: none;
     border-radius: 5px;
