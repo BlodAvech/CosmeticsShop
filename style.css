@@ -12,6 +12,7 @@
     --text-dark: #050505;
     --border-radius: 8px;
     --transition: all 0.3s ease;
+    --btn-shadow: 0 0 10px var(--dark-pink);
 }
 
 * {
@@ -43,26 +44,31 @@ h1, h2, h3 {
 
 button {
     background: var(--primary-color);
-    color: white;
+    color:var(--light-bg);
     border: none;
     padding: 8px 12px;
-    border-radius: var(--border-radius);
+    border-radius: var(--border-radius) !important;
     cursor: pointer;
     transition: var(--transition);
     margin: 5px;
-    
+    box-shadow: var(--btn-shadow);
 }
 
 button:hover {
-    background: var(--dark-pink);
+    background: var(--light-bg);
+    color:var(--primary-color);
 }
 
 /* Layout Areas */
 #logo { 
     height: 70px; 
     width: 70px; 
-    margin-right: auto; 
+
+    flex: auto;
+    margin-left: 10px;
 }
+
+
 #logo img { 
     height: 100%; 
     border-radius: 50%; 
@@ -73,9 +79,10 @@ button:hover {
     background-color: var(--dark-pink);
     padding: 10px 20px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
 }
+
 
 .header { grid-area: head2; }
 .sidebar { grid-area: side; }
@@ -212,7 +219,6 @@ body.dark-theme .footer {
 /* Price Filter */
 .price-buttons {
     background: linear-gradient(135deg, var(--light-bg), var(--primary-color));
-    border-radius: 10px;
     padding: 10px;
     text-align: center;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
@@ -320,12 +326,12 @@ body.dark-theme .footer {
 
 /* Search */
 #FindTextInput {
-    margin: 0px 100px;
-    width: 220px;
+    width: 200px;
     padding: 8px;
     border-radius: 8px;
     border: 1px solid #aaa;
     text-align: center;
+    margin-right: 3%;
 }
 
 .highlight {
@@ -463,7 +469,7 @@ body.dark-theme .footer {
     text-align: center;
     border: 1px solid #f1a7c5;
     border-radius: 10px;
-    padding: 15px;
+    padding: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -490,6 +496,17 @@ body.dark-theme .footer {
     margin: 10px;
     padding: 25px;
     border-radius: 15px;
+}
+
+.cart-items button
+{
+    margin-top: 5px;
+}
+.cart-items input
+{
+    border-radius: 5px;
+    text-align: center;
+    width: 50%;
 }
 
 .remove-notification {
@@ -524,7 +541,7 @@ body.dark-theme .footer {
     background: none;
     margin: 10px;
     padding: 25px;
-    border: 1px solid #f1a7c5;
+    border: 1px solid  var(--secondary-color);
     border-radius: 10px;
 }
 
@@ -535,9 +552,9 @@ body.dark-theme .footer {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    border: 1px solid #f1a7c5;
+    border: 1px solid var(--secondary-color);
     border-radius: 10px;
-    padding: 15px;
+    padding: 5px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -559,6 +576,12 @@ body.dark-theme .footer {
     transform: scale(1.1);
 }
 
+.favorites-items button
+{
+    margin: 5px 0px;
+    justify-self: end;
+}
+
 /* Profile Page Specific Styles */
 
 #main_profile {
@@ -572,7 +595,11 @@ body.dark-theme .footer {
     border-radius: 15px;
     padding: 25px;
     margin-bottom: 30px;
-    box-shadow: 0 0 15px #C55583;
+    box-shadow: var(--btn-shadow);
+
+    display: flex;
+    flex-direction: column;
+
 }
 
 .profile_header {
@@ -616,6 +643,73 @@ body.dark-theme .footer {
     color: #4c2036;
 }
 
+#profile_signin_btn , #profile_login_btn
+{
+    box-shadow: none;
+    background: none;
+    color: #000 !important;
+    margin: 15px 0px;
+}
+
+#profile_signin_btn:hover , #profile_login_btn:hover
+{
+    box-shadow: 0 0 10px var(--dark-pink);
+    background: var(--dark-pink);
+    color: var(--light-bg) !important; 
+}
+
+#profile_login,
+#profile_signin {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 40px 30px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  display: none;
+}
+
+#profile_login h2,
+#profile_signin h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#profile_login input,
+#profile_signin input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  font-size: 14px;
+}
+
+#profile_login input:focus,
+#profile_signin input:focus {
+  border-color: var(--primary-color);
+}
+
+#profile_login button,
+#profile_signin button {
+  width: 100%;
+  padding: 10px;
+  background: var(--dark-pink);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#profile_login button:hover,
+#profile_signin button:hover {
+  background: var(--primary-color);
+}
 /* Contact Page Specific Styles */
 .contact-container {
     max-width: 70%;
@@ -970,4 +1064,5 @@ body.dark-theme .footer {
 .next {
     right: 10px;
 }
+
 

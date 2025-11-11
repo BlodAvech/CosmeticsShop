@@ -6,9 +6,9 @@ $(document).ready(function(){
     const $buyersBg = $('.buyers_stat .progress_bg');
     const $visitsBg = $('.visits_stat .progress_bg');
 
-	animateStat($purchasesCountText , $purchasesBg , 0 , 9876543210 , 5);
-	animateStat($buyersCountText , $buyersBg , 0 , 123456789 , 5);
-	animateStat($visitsCountText , $visitsBg , 0 , 12345678900 , 5);
+	animateStat($purchasesCountText , $purchasesBg , 0 , 987654321 , 5);
+	animateStat($buyersCountText , $buyersBg , 0 , 12345678 , 5);
+	animateStat($visitsCountText , $visitsBg , 0 , 1234567890 , 5);
 });
 
             function animateStat($element, $progressBar, startV, endV, duration) {

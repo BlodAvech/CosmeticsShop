@@ -57,17 +57,11 @@ forms.forEach(form => {
 		}
 
 		if(formHasError) 
-			{
-				alert(log);
-				if(form.classList.contains('subscribe_form')) onPopupFormSubmit(form , false);
-			}
+		{
+			alert(log);
+		}
 		else 
 		{
-			if(form.classList.contains('subscribe_form')) 
-				{
-					onPopupFormSubmit(form , true);
-					return;
-				}
 			form.submit();
 		}
 	});
