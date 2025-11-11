@@ -2,25 +2,55 @@
 
 :root {
     /* Розовый*/
-    /*--primary-color: #db5f9d;
+    /* --primary-color: #db5f9d;
     --secondary-color: #f8c8dc;
     --dark-color: #C55583;
-    --light-bg: #F7E6F6; 
+    --light-color: #F7E6F6; 
     --btn-shadow: 0 0 10px var(--dark-color); */
 
     /* Сиреневый*/
     /* --primary-color: #9b59b6;     
     --secondary-color: #d7bde2;   
+    --secondary-color: #d7bde2;   
     --dark-color: #7d3c98;      
-    --light-bg: #f4ecf7;         
-    --btn-shadow: 0 0 10px var(--dark-color); */ 
+    --light-color: #f4ecf7;         
+    --btn-shadow: 0 0 10px var(--dark-color); */
 
     /* Золотой */
-    --primary-color: #d4af37;
+    /*--primary-color: #d4af37;
     --secondary-color: #f7e7a9;
     --dark-color: #cf9b19;
-    --light-bg: #fff8dc;
+    --light-color: #fff8dc;
+    --btn-shadow: 0 0 10px var(--dark-color); */
+
+    /* Золотой */
+    /*--primary-color: #ff007f;
+    --secondary-color: #ff66b2;
+    --dark-color: #cc0066;
+    --light-color: #ffe6f0;
     --btn-shadow: 0 0 10px var(--dark-color);
+    */
+
+    /* Крассный */
+    /* --primary-color: #ff4500;    
+    --secondary-color: #ff7f50;   
+    --dark-color: #cc3700;        
+    --light-bg: #fff5f0;           
+    --btn-shadow: 0 0 10px var(--dark-color); */
+
+    /* Лавандовый */
+    /* --primary-color: #9b59b6;    
+    --secondary-color: #d7bde2;  
+    --dark-color: #7d3c98;         
+    --light-color: #f4ecf7;         
+    --btn-shadow: 0 0 10px var(--dark-color); */
+
+    --primary-color: #9b59b6;    
+    --secondary-color: #f7c6d0;  
+    --dark-color: #6a1b9a;       
+    --light-color: #fdf0fb;           
+    --btn-shadow: 0 0 10px var(--dark-color);
+
 
 
 
@@ -38,7 +68,7 @@
 body {
     transition: background-color 0.5s ease, color 0.5s ease;
     min-height: 100vh;
-    background-color: var(--light-bg);
+    background-color: var(--light-color);
     font-family: 'Verdana', sans-serif;
     color: var(--text-dark);
     display: grid;
@@ -58,7 +88,7 @@ h1, h2, h3 {
 
 button {
     background: var(--primary-color);
-    color:var(--light-bg);
+    color:var(--light-color);
     border: none;
     padding: 8px 12px;
     border-radius: var(--border-radius) !important;
@@ -69,7 +99,7 @@ button {
 }
 
 button:hover {
-    background: var(--light-bg);
+    background: var(--light-color);
     color:var(--primary-color);
 }
 
@@ -106,7 +136,7 @@ button:hover {
 /* Navigation */
 .nav_buttons {
     font-size: 20px;
-    color: var(--light-bg);
+    color: var(--light-color);
     cursor: pointer;
     transition: var(--transition);
     text-decoration: none;
@@ -232,7 +262,7 @@ body.dark-theme .footer {
 
 /* Price Filter */
 .price-buttons {
-    background: linear-gradient(135deg, var(--light-bg), var(--primary-color));
+    background: linear-gradient(135deg, var(--light-color), var(--primary-color));
     padding: 10px;
     text-align: center;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
@@ -278,7 +308,7 @@ body.dark-theme .footer {
 
 .product-card {
     background-color: #fff;
-    border: 1px solid #f1a7c5;
+    border: 1px solid var(--secondary-color);
     border-radius: 10px;
     width: 220px;
     padding: 15px;
@@ -669,7 +699,7 @@ body.dark-theme .footer {
 {
     box-shadow: 0 0 10px var(--dark-color);
     background: var(--dark-color);
-    color: var(--light-bg) !important; 
+    color: var(--light-color) !important; 
 }
 
 #profile_login,
@@ -806,7 +836,7 @@ body.dark-theme .footer {
 
 .faq-question {
     width: 100%;
-    background-color: var(--light-bg);
+    background-color: var(--light-color);
     color: #000;
     font-weight: bold;
     padding: 12px;
@@ -876,7 +906,7 @@ body.dark-theme .footer {
     margin: 20px;
     border-radius: 15px;
     text-align: center;
-    border: 2px solid var(--light-bg);
+    border: 2px solid var(--light-color);
 }
 
 .read-more-content {
@@ -944,15 +974,15 @@ body.dark-theme .footer {
 }
 
 .purchased_stat .progress_bg {
-    background: linear-gradient(135deg, #e47bb3 0%, #58354c 100%);
+    background: linear-gradient(135deg, var(--light-color) 0%, var(--dark-color) 100%);
 }
 
 .buyers_stat .progress_bg {
-    background: linear-gradient(135deg, #e480da 0%, #bf7da2 100%);
+    background: linear-gradient(135deg, var(--dark-color) 0%, var(--secondary-color) 100%);
 }
 
 .visits_stat .progress_bg {
-    background: linear-gradient(135deg, #5d3654 0%, #ff9bf5 100%);
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
 }
 
 .purchased_title, .buyers_title, .visits_title {
@@ -973,7 +1003,7 @@ body.dark-theme .footer {
 }
 
 .rating-section {
-    border: 2px solid #db5f9d;
+    border: 2px solid var(--primary-color);
     padding: 15px;
     border-radius: 10px;
 }
@@ -1002,7 +1032,7 @@ body.dark-theme .footer {
 }
 
 #music-btn {
-    background: linear-gradient(135deg, #ffe2f5, #c6148d);
+    background: linear-gradient(135deg, var(--light-color), var(--dark-color));
     border: none;
     color: white;
     font-weight: bold;
