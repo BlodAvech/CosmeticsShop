@@ -1030,7 +1030,14 @@ body.dark-theme .footer {
 .rating-section {
     border: 2px solid var(--primary-color);
     padding: 15px;
+    background-color: rgba(255, 255, 255, 0.885);
     border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.rating-section:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 18px rgba(178, 40, 242, 0.608);
 }
 
 .stars {
