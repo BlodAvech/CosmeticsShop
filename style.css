@@ -145,6 +145,15 @@ button:hover {
     transition: var(--transition);
     text-decoration: none;
     padding: 20px;
+    display: flex;
+}
+
+.nav_buttons img
+{
+    height: 30px;
+    margin-right: 10px;
+    filter: invert();
+
 }
 
 .nav_buttons:hover {

@@ -12,10 +12,10 @@ document.addEventListener('DOMContentLoaded', function() {
     function setTheme(theme) {
         if (theme === 'dark') {
             document.body.classList.add('dark-theme');
-            themeToggle.textContent = 'Day Mode';
+            themeToggle.innerHTML = '<img src="img/icons/day-mode.png"> Day Mode';
         } else {
             document.body.classList.remove('dark-theme');
-            themeToggle.textContent = 'Night Mode';
+            themeToggle.innerHTML = '<img src="img/icons/night-mode.png"> Night Mode';
         }
         localStorage.setItem('theme', theme);
     }

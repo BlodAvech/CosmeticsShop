@@ -1,15 +1,22 @@
 $(document).ready(function () {
   const products = getProductsName();
 
+  const searchContainer = $('<div class="search-container"></div>').css({
+    position: "relative",
+    display: "inline-block"
+  });
+
+  $("#FindTextInput").wrap(searchContainer);
+
   const suggestionBox = $("<ul id='suggestions'></ul>").css({
     position: "absolute",
-    top: "60px",
-    left: "42%",
-    transform: "translateX(-50%)",
+    top: "100%", 
+    left: "0",
+    width: "100%", 
     background: "white",
     border: "1px solid #ccc",
-    borderRadius: "6px",
-    width: "200px",
+    borderTop: "none", 
+    borderRadius: "0 0 6px 6px",
     maxHeight: "180px",
     overflowY: "auto",
     boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
@@ -19,7 +26,8 @@ $(document).ready(function () {
     zIndex: 1000,
     display: "none"
   });
-  $("body").append(suggestionBox);
+
+  $("#FindTextInput").after(suggestionBox);
 
   function highlightMatches(keyword) {
     $(".product-name").each(function () {
@@ -92,10 +100,16 @@ $(document).ready(function () {
     highlightMatches(query);
   });
 
-
   $(document).on("click", function (e) {
-    if (!$(e.target).closest("#FindTextInput").length) {
+    if (!$(e.target).closest("#FindTextInput").length && 
+        !$(e.target).closest("#suggestions").length) {
       suggestionBox.hide();
     }
+  });
+
+  $("#FindTextInput").on("blur", function () {
+    setTimeout(() => {
+      suggestionBox.hide();
+    }, 150);
   });
 });

@@ -18,6 +18,6 @@ $(document).ready(function() {
                     $textcontainer.text(currentText);
                 }, 100);
             }
-        }, 75 * i);
+        }, 100 * i);
     }
 });
