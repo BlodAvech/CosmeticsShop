@@ -159,8 +159,19 @@ button:hover {
     background-color: #f8f8f8;
 }
 
-.header_title { font-size: 50px; }
-.header_subtitle { font-size: 24px; }
+.header_title { font-size: 50px; 
+    animation-name: animationHeaderTitle; 
+    animation-duration: 5s; }
+.header_subtitle { font-size: 24px;
+}
+
+@keyframes animationHeaderTitle {
+    0%   {color: #faa4d9;}
+    25%  {color: #bb00ff; margin-right:100px}
+    50%  {color: #bb00ff; margin-left:100px;}
+    100% {color: #730080;}
+
+}
 
 /* Sidebar */
 .sidebar {
@@ -917,11 +928,23 @@ body.dark-theme .footer {
 
 .short-text {
     display: block;
+    color: #0c0c0c;
 }
 
 .full-text {
     display: none;
+    color: #000000;
+    animation-name:animationFullText;
+    animation-duration: 4s;
 }
+
+@keyframes animationFullText {
+    0%   {color: red;}
+    25% {color: yellow;}
+    50%  {color: blue;}
+    100% {color: green;}
+}
+
 
 .read-more-btn {
     background: var(--primary-color);
@@ -940,6 +963,8 @@ body.dark-theme .footer {
     cursor: pointer;
     margin: 3px 0;
 }
+
+
 
 /* Home Page Specific Styles */
 
