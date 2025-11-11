@@ -5,6 +5,8 @@ $(document).ready(function() {
     let currentText = "";
 
     $textcontainer.text("");
+	$textcontainer.css("opacity","100%");
+
 
     for(let i = 0; i < finalText.length; i++) {
         setTimeout(() => {
