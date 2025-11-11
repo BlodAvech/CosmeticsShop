@@ -61,8 +61,3 @@ function btn_sale() {
         $(".added-to-favorites-notification").fadeOut();
     });
 }
-
-
-   
-
-

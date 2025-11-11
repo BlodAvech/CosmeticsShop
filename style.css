@@ -1137,5 +1137,26 @@ body.dark-theme .footer {
   transform: scale(1.05);
   background-color: #9b4aa6;
 }
+@keyframes gradientFade {
+  0% {
+    opacity: 1;
+    background: linear-gradient(90deg, #fff5f5, #ffe5f0);
+  }
+  50% {
+    background: linear-gradient(90deg, #ffd6eb, #f5e1ff);
+  }
+  100% {
+    opacity: 0;
+    background: linear-gradient(90deg, #f5e1ff, #ffffff);
+    transform: translateY(20px);
+  }
+}
+
+.item.remove-anim {
+  animation: gradientFade 2.5s ease forwards; /* slow and smooth */
+  border-radius: 12px;
+}
+
+
 
 
