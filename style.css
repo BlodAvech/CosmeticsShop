@@ -1,18 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --primary-color: #db5f9d;
+    /* Розовый*/
+    /*--primary-color: #db5f9d;
     --secondary-color: #f8c8dc;
-    --dark-pink: #C55583;
+    --dark-color: #C55583;
     --light-bg: #F7E6F6; 
-    --btn-shadow: 0 0 10px var(--dark-pink);
+    --btn-shadow: 0 0 10px var(--dark-color); */
 
-/*     
-    --primary-color: #9b59b6;     
+    /* Сиреневый*/
+    /* --primary-color: #9b59b6;     
     --secondary-color: #d7bde2;   
-    --dark-pink: #7d3c98;      
+    --dark-color: #7d3c98;      
     --light-bg: #f4ecf7;         
-    --btn-shadow: 0 0 10px var(--dark-pink); */
+    --btn-shadow: 0 0 10px var(--dark-color); */ 
+
+    /* Золотой */
+    --primary-color: #d4af37;
+    --secondary-color: #f7e7a9;
+    --dark-color: #cf9b19;
+    --light-bg: #fff8dc;
+    --btn-shadow: 0 0 10px var(--dark-color);
+
+
 
     --text-dark: #050505;
     --border-radius: 8px;
@@ -80,7 +90,7 @@ button:hover {
 
 .nav { 
     grid-area: head1; 
-    background-color: var(--dark-pink);
+    background-color: var(--dark-color);
     padding: 10px 20px;
     display: flex;
     justify-content: flex-start;
@@ -149,7 +159,7 @@ button:hover {
 /* Footer */
 .footer {
     width: 100%;
-    background-color: var(--dark-pink);
+    background-color: var(--dark-color);
     text-align: center;
     margin-top: auto;
     padding: 30px 0;
@@ -382,7 +392,7 @@ body.dark-theme .footer {
 
 .blog-content {
     justify-content: center;
-    border: 2px solid #f8c8dc;
+    border: 2px solid var(--secondary-color);
     border-radius: 10px;
     padding: 15px;
     margin: 20px auto;
@@ -425,7 +435,7 @@ body.dark-theme .footer {
     text-align: left;
     padding: 14px 16px;
     font-size: 16px;
-    background: #ff80c0;
+    background: var(--primary-color);
     color: #fff;
     border: 0;
     border-radius: 8px;
@@ -460,7 +470,7 @@ body.dark-theme .footer {
     background:none;
     margin: 10px;
     padding: 25px;
-    border: 1px solid #f1a7c5;
+    border: 1px solid var(--secondary-color);
     border-radius: 10px;
 }
 
@@ -471,7 +481,7 @@ body.dark-theme .footer {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    border: 1px solid #f1a7c5;
+    border: 1px solid var(--secondary-color);
     border-radius: 10px;
     padding: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -657,8 +667,8 @@ body.dark-theme .footer {
 
 #profile_signin_btn:hover , #profile_login_btn:hover
 {
-    box-shadow: 0 0 10px var(--dark-pink);
-    background: var(--dark-pink);
+    box-shadow: 0 0 10px var(--dark-color);
+    background: var(--dark-color);
     color: var(--light-bg) !important; 
 }
 
@@ -702,7 +712,7 @@ body.dark-theme .footer {
 #profile_signin button {
   width: 100%;
   padding: 10px;
-  background: var(--dark-pink);
+  background: var(--dark-color);
   color: white;
   border: none;
   border-radius: 10px;
@@ -796,7 +806,7 @@ body.dark-theme .footer {
 
 .faq-question {
     width: 100%;
-    background-color: #f8c8dc;
+    background-color: var(--light-bg);
     color: #000;
     font-weight: bold;
     padding: 12px;
@@ -808,7 +818,7 @@ body.dark-theme .footer {
 }
 
 .faq-question:hover {
-    background-color: #db5f9d;
+    background-color: var(--secondary-color);
     color: white;
 }
 
@@ -840,7 +850,7 @@ body.dark-theme .footer {
     width: 240px;
     padding: 13px;
     margin: 18px;
-    border: 2px outset #dec3d1;
+    border: 2px outset var(--secondary-color);
     border-radius: 10px;
     box-shadow: 5px 5px 5px #a2a0a0;
     background: white;
@@ -866,7 +876,7 @@ body.dark-theme .footer {
     margin: 20px;
     border-radius: 15px;
     text-align: center;
-    border: 2px solid #f8c8dc;
+    border: 2px solid var(--light-bg);
 }
 
 .read-more-content {
