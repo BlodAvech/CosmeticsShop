@@ -9,12 +9,12 @@
     --btn-shadow: 0 0 10px var(--dark-color); */
 
     /* Сиреневый*/
-    /* --primary-color: #9b59b6;     
+    --primary-color: #9b59b6;     
     --secondary-color: #d7bde2;   
     --secondary-color: #d7bde2;   
     --dark-color: #7d3c98;      
     --light-color: #f4ecf7;         
-    --btn-shadow: 0 0 10px var(--dark-color); */
+    --btn-shadow: 0 0 10px var(--dark-color);
 
     /* Золотой */
     /*--primary-color: #d4af37;
@@ -45,11 +45,11 @@
     --light-color: #f4ecf7;         
     --btn-shadow: 0 0 10px var(--dark-color); */
 
-    --primary-color: #9b59b6;    
+    /* --primary-color: #9b59b6;    
     --secondary-color: #f7c6d0;  
     --dark-color: #6a1b9a;       
     --light-color: #fdf0fb;           
-    --btn-shadow: 0 0 10px var(--dark-color);
+    --btn-shadow: 0 0 10px var(--dark-color); */
 
 
 
