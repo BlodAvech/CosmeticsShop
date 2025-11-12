@@ -3,8 +3,8 @@ document.getElementById("checkoutForm").addEventListener("submit", function(even
     const email = document.getElementById("email").value.trim();
 
     if (!email || !email.includes("@") || !email.includes(".")) {
-        alert("Введите корректный email.");
+        alert("Write correct email.");
         return;
     }
-    alert("Email принят");
+    alert("Email accepted");
 });

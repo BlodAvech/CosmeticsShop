@@ -51,7 +51,7 @@ function UpdateUI_Favorites() {
   }
 
 
- ocument.addEventListener("click", function (e) {
+ document.addEventListener("click", function (e) {
     if (e.target.classList.contains("add-to-cart")) {
         const itemElement = e.target.closest(".item");
         const name = itemElement.querySelector("strong").textContent.trim();
