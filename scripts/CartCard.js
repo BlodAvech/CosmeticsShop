@@ -1,6 +1,6 @@
 class CartCard
 {
-	constructor(name, price, imgSrc , amount = 0)
+	constructor(name, price, imgSrc , amount = 1)
 	{
 		this.name = name;
 		this.price = price;
@@ -39,8 +39,7 @@ cartItems = [
 	new CartCard("Raund lab cleanser foam", 25, "https://a.lmcdn.ru/product/M/P/MP002XW13FNP_25478400_1_v2_2x.jpg", 1),
 ];
 
-
-if (window.location.pathname.includes("cart.html")) UpdateUI();
+UpdateUI()
 
 function UpdateUI()
 {
@@ -78,6 +77,8 @@ document.addEventListener("click", function(e) {
         setTimeout(function() {
             $(".remove-notification").fadeOut();
         }, 2000);
+
+		SetInteractives();
 	}
 });
 

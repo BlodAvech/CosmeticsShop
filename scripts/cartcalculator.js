@@ -1,5 +1,3 @@
-let amountInputs = document.querySelectorAll('input[name="cart_item_amount"]');
-let prices = document.querySelectorAll('.cart_item_price');
 const totalPrice = document.querySelector('#cart_totalprice');
 
 
@@ -7,6 +5,8 @@ OnCartItemAmountChanged();
 
 function OnCartItemAmountChanged()
 {
+	let amountInputs = document.querySelectorAll('input[name="cart_item_amount"]');
+	let prices = document.querySelectorAll('.cart_item_price');
 	let sum = 0;
 
 	for(let i = 0 ; i < amountInputs.length ; i++)
